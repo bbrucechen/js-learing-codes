@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 可以解析变量
+		let name = `我叼那你`;
+		console.log(name instanceof String);
+		let sayHello = `hello my name is ${name}`;
+		console.log(sayHello);
+
+
+		// 模板字符串可以换行
+		let result = {
+			name:'zd',
+			age:18
+		}
+
+		let html = ` 
+			<div>
+				<span>${result.name}</span>
+				<span>${result.age}</span>
+			</div>
+		`;
+		console.log(html);
+
+		// 可以调用函数
+		const fn = () => {
+			return '我是fn函数';
+		}
+		let html1 = `我是模板字符串 ${fn()}`;
+		console.log(html1);
+	</script>
+</body>
+</html>

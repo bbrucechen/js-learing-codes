@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// window.setTimeout(调用函数，延迟时间)；
+		//延迟时间单位为毫秒 可以不写 默认为0
+		//这个调用函数可以直接写函数 也可以写 函数名  也可以'函数名()'
+		//页面中可能有多个定时器 一般要起标识符
+		setTimeout(function(){
+			alert('111');
+		},2000);
+		function callback() {
+			console.log('爆炸了');
+		}
+		setTimeout(callback,3000);
+		var time1 = setTimeout(callback,1000);
+		var time2 = setTimeout(callback,3000);
+
+	</script>
+</body>
+</html>

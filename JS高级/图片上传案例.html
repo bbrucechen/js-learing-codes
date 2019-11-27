@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="file" name="" id="" multiple>
+	<img src="" alt="">
+	<script type="text/javascript">
+		var input = document.querySelector("input");
+		var img =document.querySelector("img");
+		input.addEventListener("change",function(){
+			var reader  = new FileReader();
+			reader.readAsDataURL(this.files[0]);
+			reader.onload = function() {
+				img.src = reader.result;
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// 简易计算器
+		// function numCal(num1,num2) {
+		// 	return [num1+num2,num1-num2,num1*num2,num1/num2];
+		// }
+		// var oneNum=parseInt(prompt('请输入第一个数'));
+		// var twoNum=parseInt(prompt('请输入第二个数'));
+		// var cal=prompt('请输入运算方式');
+		// var result = numCal(oneNum,twoNum);
+		// switch(cal) {
+		// 	case '加法' : 
+		// 	var Result=result[0];
+		// 	alert('结果为'+Result);
+		// 	break;
+		// 	case '减法' : 
+		// 	var Result=result[1];
+		// 	alert('结果为'+Result);
+		// 	break;
+		// 	case '乘法' : 
+		// 	var Result=result[2];
+		// 	alert('结果为'+Result);
+		// 	break;
+		// 	case '除法' : 
+		// 	var Result=result[3];
+		// 	alert('结果为'+Result);
+		// 	break;
+		// }
+
+		// 素数判断
+		var num=prompt('请输入一个数');
+		function IsPriNum(num1) {
+			for(var i = 2;i < num1;i ++) {
+				if(num1 % i == 0) {
+					alert('合数');
+					return;
+				}
+			}
+			alert('素数');
+		}
+		IsPriNum(num);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

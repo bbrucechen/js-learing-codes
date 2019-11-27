@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="file" name="" id="" multiple>
+	<div>
+		
+	</div>
+	<script type="text/javascript">
+		// 把文件上传并显示
+		//1.上传文件 借助于文件域 input file
+		var file = document.querySelector("input");
+		var div = document.querySelector("div");
+
+		// onchange可以用来检测多种元素组件发生变化
+		file.onchange = function(){
+			console.log(file.files);
+			// file表单中的files属性是上传文件的集合对象 包含了上传的文件的信息
+
+		//2.选择文件进行读取 利用FileReader对象 h5新增内置对象
+		// 初始化一个fileReader对象
+		var reader = new FileReader();
+		// reader.readAsText();  //该方法可以读取文件里面的内容
+		reader.readAsText(this.files[0]);
+
+		//3.把读取的内容显示到页面中 当文件读取完毕之后，会把内容存放到result属性中
+		// reader.onload 表示文件读取完毕而且内容存放到了result属性里时
+		reader.onload = function(){
+			// 文本内容编码应与代码中一致
+				console.log(this.result);
+				div.innerHTML = this.result;
+		}
+		}
+		
+		
+	</script>
+</body>
+</html>

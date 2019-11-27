@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 量词符：规定某个模式出现次数
+
+		// //* 相当于a>=0 可以出现0次或者很多次
+		//  var reg = /^a*$/; // 只允许出现a，a的次数可以是0或者多次
+		// console.log(reg.test(''));
+		// console.log(reg.test('a'));
+		// console.log(reg.test('aaaaa'));
+		// console.log(reg.test('aaaabbbb'));
+		// console.log('...............');
+
+		// //+ 相当于>=1 可以出现1次或者很多次
+		// var reg1 = /^a+$/; //只允许出现a，a的次数可以是1次或者多次
+		// console.log(reg1.test(''));
+		// console.log(reg1.test('ab'));
+		// console.log(reg1.test('aaaaaaaaaaaa'));
+		// console.log('...............');
+
+
+
+		// //? 相当于1|0 可以出现1次或0次
+		// var reg2 = /^a?$/; //a出现1次或0次为true 其他为false
+		// console.log(reg2.test(''));
+		// console.log(reg2.test('a'));
+		// console.log(reg2.test('aaaa'));
+		// console.log('...........');
+
+		// //{3} 重复3次
+		// var reg3 = /^a{3}$/; //a重复3次为true
+		// console.log(reg3.test('')); 
+		// console.log(reg3.test('a'));
+		// console.log(reg3.test('aaaa'));
+		// console.log(reg3.test('aaa'));
+		// console.log('.......');
+
+		//{3，} 大于3次为true
+		var reg3 = /^a{3,}$/; //a出现大于3次为true
+		console.log(reg3.test(''));  
+		console.log(reg3.test('a'));
+		console.log(reg3.test('aaaa'));
+		console.log(reg3.test('aaaaa'));
+		console.log(reg3.test('aaa'));
+		console.log('...........');
+
+		//{3,16} 出现次数大于等于3 小于等于16为true
+		var reg4 = /^a{3,6}$/;
+		console.log(reg4.test('')); 
+		console.log(reg4.test('a'));
+		console.log(reg4.test('aaaa'));
+		console.log(reg4.test('aaaaaaa'));
+	</script>
+</body>
+</html>

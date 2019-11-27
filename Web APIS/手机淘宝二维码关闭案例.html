@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 10px;
+			height: 10px;
+			background-color: #ccc;
+			position: absolute;
+			top: 6px;
+			left: 58px;
+			font-size: 5px;
+			line-height: 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img src="mobile_qrcode.png">
+	<div>×</div>
+	<script type="text/javascript">
+		var img = document.querySelector('img');
+		var div = document.querySelector('div');
+		div.onclick = function() {
+			img.style.display = 'none';
+			div.style.display = 'none';
+		}
+	</script>
+</body>
+</html>

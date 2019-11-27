@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		.color {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+	<button>5</button>
+	<button>6</button>
+	<button>7</button>
+	<script>
+		$(function(){
+			$("button").click(function(){
+				$(this).siblings('button').css("background-color","");
+				$(this).css("background-color","red");
+			})
+		})
+	</script>
+</body>
+</html>

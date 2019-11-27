@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 利用递归函数求1~n的阶乘 1*2*3*。。。*n
+		
+		var result = 1;
+		function levelplus(num) {
+			if( num == 1 ) {
+				console.log(result);
+				return;
+			}
+			result *= num--;
+			levelplus(num);
+		}
+		levelplus(1);
+
+		function fn(n) {
+			if(n == 1) {
+				return 1;
+			}
+			return n * fn(n-1);
+					}
+		console.log(fn(1));
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var str = 'abcoefoxyozzopp';
+		// var i=0;
+		// function findo(str1) {
+		// 	var pos=0;
+		// 	while(str1.indexOf('o',pos) != -1) {
+		// 			i += 1;
+		// 			console.log('第'+i+'个的位置：'+str1.indexOf('o',pos));
+		// 			pos = str1.indexOf('o',pos)+1;
+		// 	}
+		// 	console.log('一共有'+i+'个');
+		// }
+		// findo(str);
+		// 检查重复个数及所在位置
+		 var str = 'oabcoefoxyozzopp';
+		 var index = str.indexOf('o');
+		 var num =0;
+		 while(index != -1) {
+		 	console.log(index);
+		 	num ++;
+		 	index = str.indexOf('o',index+1);
+		 }
+		 console.log('出现的此数是'+num);
+
+		 var color =['red','blue','red','green','pink','red'];
+		 var index1 = color.indexOf('red');
+		 var num1 = 0;
+		 while(index1 != -1) {
+		 	console.log(index1);
+		 	num1++;
+		 	index1 = color.indexOf('red',index1+1);
+		 }
+		 console.log('出现的个数是'+num1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div>
+		我是div
+	</div>
+	<div class="nav">
+		div nav
+	</div>
+	<p>p</p>
+	<ol>
+		<li>ol1</li>
+		<li>ol2</li>
+		<li>ol3</li>
+		<li>ol4</li>
+	</ol>
+	<ul>
+		<li>ul</li>
+		<li>ul</li>
+		<li>ul</li>
+		<li>ul</li>
+	</ul>
+	<script type="text/javascript">
+		$(function(){
+			$(".nav")[0].innerHTML = '1';
+			$("ul li")[0].innerHTML = 'ul1';
+		})
+	</script>
+</body>
+</html>

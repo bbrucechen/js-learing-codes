@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>onLine</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #F7F7F7;
+		}
+
+		p {
+			width: 200px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			margin: 100px auto;
+			color: #FFF;
+			font-size: 24px;
+			background-color: #000;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<p class="tips"></p>
+	<script src="jquery.min.js"></script>
+	<script>
+	   // 通过 window.navigator.onLine 来检测网络是否可用
+	   // alert(window.navigator.onLine);
+	   // 1. 当网络连接到时候  弹出 p 显示网络连接 然后消失
+	   window.addEventListener('online', function() {
+	   	  $(".tips").text("网络已经连接").fadeIn(500).delay(1000).fadeOut();
+	   })
+ 		// 2. 当网络断开到时候  弹出 p 显示网络已断开 然后消失
+ 		window.addEventListener('offline', function() {
+	   	  $(".tips").text("奥利个奥，网络断开了").fadeIn(500).delay(1000).fadeOut();
+	   })
+
+	</script>
+</body>
+</html>

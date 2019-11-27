@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <button>上拉</button>
+    <button>下拉</button>
+    <button>切换滑动</button>
+    <div></div>
+    <script>
+       $(function(){
+        var flag = true;
+        // 参数与显示隐藏一致
+        if(flag) {
+            $("button").eq(0).click(function() {
+                flag = false;
+                // 向上拉
+            $("div").slideUp(1000,function(){
+                flag = true;
+            });
+        })
+         $("button").eq(1).click(function() {
+                flag = false;
+                // 向下拉
+            $("div").slideDown(1000,function(){
+                flag = true;
+            });
+        })
+          $("button").eq(2).click(function() {
+                flag = false;
+                // 切换滑动
+            $("div").slideToggle(300,function(){
+                flag = true;
+            });
+        })
+        }
+       })
+       // 一般情况下，不加参数直接显示隐藏
+    </script>
+</body>
+
+</html>

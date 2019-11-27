@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			width: 300px;
+			height: 300px;
+			background-color: pink;
+			margin: 50px 0 0 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<script type="text/javascript">
+		var box = document.querySelector('.box');
+		// box.addEventListener('click', function(e) {
+		// 	console.log('x轴坐标：' + (e.pageX - this.offsetLeft));
+		// 	console.log('y轴坐标：' + (e.pageY - this.offsetTop)); 
+		// })
+
+			box.addEventListener('click', function(e) {
+			console.log('x轴坐标：' + (e.pageX - this.offsetLeft));
+			console.log('y轴坐标：' + (e.pageY - this.offsetTop)); 
+		})
+	</script>
+</body>
+</html>

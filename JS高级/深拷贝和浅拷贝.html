@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+			id:1,
+			name:'andy',
+			msg: {
+				age:18
+			},
+			color:['pink','red']
+		}
+
+		var o = {};
+		// for(var k in obj) {
+			// o[k] = obj[k];
+		// }
+		//浅拷贝 遇到更深层数据时，只是把obj的msg的地址赋予o，即obj和o的msg是同一个，修改o的msg也会影响obj
+		// o.msg.age = 20;
+		// o.color[0] = 'green';
+		// console.log(obj.msg.age);
+		// console.log(obj.color[0]);
+
+		// 浅拷贝语法糖 Object.assign(target,source)
+		Object.assign(o,obj);
+		console.log(o);
+		o.msg.age = 20;
+		console.log(obj.msg.age);
+
+
+		
+	</script>
+</body>
+</html>

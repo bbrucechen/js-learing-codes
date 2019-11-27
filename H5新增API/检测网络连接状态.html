@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>onLine</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #F7F7F7;
+		}
+
+		p {
+			width: 200px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			margin: 100px auto;
+			color: #FFF;
+			font-size: 24px;
+			background-color: #000;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<p class="tips"></p>
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+		// 以前通过 window.navigator.online来检查网络是否可用 兼容性不好
+		// alert(window.navigator.onLine);
+		// 但网络链接时，弹出p 显示网络链接 并消失
+		window.addEventListener("online",function(){
+			$(".tips").text("网络已经连接").fadeIn(500).delay(1000).fadeOut(500);
+		})
+		// 但网络断开时，弹出p 显示网络断开 并消失
+		window.addEventListener("offline",function(){
+			$(".tips").text("网络已经断开").fadeIn(500).delay(1000).fadeOut(500);
+		})
+
+		window.onoffline = function() {
+			alert("disonnect");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type="">stop</button>
+	<script type="text/javascript">
+		var btn  = document.querySelector('button');
+		var timer = setTimeout(function() {
+			console.log('爆炸');
+		},5000);
+		btn.onclick = function() {
+			clearTimeout(timer);
+		}
+	</script>
+</body>
+</html>

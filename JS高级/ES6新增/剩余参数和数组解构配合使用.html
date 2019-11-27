@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let arr1 = [1,2,3,4,5,6];
+		let [s1,s2,...s3] = arr1;
+		console.log(s1);
+		console.log(s2);
+		console.log(s3);
+
+		var fun = (s1,s2,...s3) => {
+			console.log(s1+s2);
+			let sum = 0;
+			s3.forEach(function(value) {
+				sum += value;
+			})
+			return sum;
+		}
+		console.log(fun(1,2,3,4,5,6));
+
+
+	</script>
+</body>
+</html>

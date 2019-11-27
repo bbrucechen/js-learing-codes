@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+		.current {
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<ol>
+	
+	</ol>
+	<script type="text/javascript">
+		$(function() {
+			// 1.单个事件注册
+			// $("div").click(function() {
+			// 	$(this).css("background-color","red");
+			// })
+			// $("div").mouseover(function() {
+			// 	$(this).css("background-color","skyblue");
+			// })
+			// 2.事件处理on 可以绑定多个事件
+			// $("div").on({
+			// 	mouseenter: function(){
+			// 		$(this).css("background-color","red");
+			// 	},
+			// 	click:function(){
+			// 		$(this).css("background-color","skyblue");
+			// 	},
+			// 	mouseleave:function() {
+			// 		$(this).css("background-color","blue");
+			// 	}
+			// });
+			$("div").on("click",function() {
+				alert("wocanima1");
+			})
+			$("div").on("mouseenter mouseleave",function(){
+				$(this).toggleClass('current');
+			})
+			// 相当于hover的写法 两个事件都会触发函数
+
+			// (2)用on可实现事件委托
+			// $("ul li").click();
+			$("ul").on("click","li",function(){
+				// 绑定的是ul，但是触发的是li
+				alert(11);
+				$(this).html("ojbk");
+			})
+			// (3) on可以给动态创建的元素添加事件
+			// 普通绑定写法无法提前给后来创建的元素绑定事件
+			// $("ol li").click(function(){
+			// 	alert(11);
+			// })
+			// 而on可以
+			$("ol").on("click","li",function(){
+				alert(11);
+			})
+			var li = $("<li>22</li>");
+			$("ol").append(li);
+		})
+	</script>
+</body>
+</html>

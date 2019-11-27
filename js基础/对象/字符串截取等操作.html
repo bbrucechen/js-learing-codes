@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// 1.concat(字符串，字符串2)
+		var str = 'andy';
+		console.log(str.concat('red'));
+
+		//substr(截取起始位置，截取的字符数)
+		var str = '改革春风吹满地';
+		console.log(str.substr(2,2));
+		console.log(str);
+
+
+		//replace('被替换的字符'，'替换为的字符') 返回的是新的修改后的字符串 原字符串不变
+		var str='andy';
+		console.log(str.replace('y','d'));
+		// 有一个字符串'abcoefoxyozzopp' 要求把所有o替换为*
+		var str1='abcoefoxyozzopp';
+		for(i=0;i<str1.length;i++) {
+			str1 = str1.replace('o','*');
+		}
+		console.log(str1);
+
+		// 方法2
+		var str1='abcoefoxyozzopp';
+		while(str1.indexOf('o') != -1) {
+			str1 = str1.replace('o','*');
+		}
+		console.log(str1);
+
+		// 2.字符转换为数组 split('分隔符')   根据原字符串的分隔符设置split里的分隔符，才能正确使字符串分割成数组
+		var str1 = 'red,pink,blue';
+		console.log(str1.split(','));
+		var str3 = 'red&pink&blue';
+		console.log(str3.split('&'));
+		var str4 = '111222333';
+		console.log(str4.split(','));
+		console.log(str3);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

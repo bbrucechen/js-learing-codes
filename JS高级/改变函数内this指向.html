@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var o = {
+			name: 1
+		}
+		function f(a,b) {
+			console.log(this);
+			console.log(a + b)
+		}
+
+		f.call(o,1,2);
+
+		function Father(uname,age) {
+			this.uname = uname;
+			this.age = age;
+		}
+
+		function Son(uname,age) {
+			Father.call(this,uname,age);
+		}
+		var son = new Son('ldh',18);
+		console.log(son);
+	</script>
+</body>
+</html>

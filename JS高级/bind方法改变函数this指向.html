@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type="">点击</button>
+	<button type="">1</button>
+	<button type="">2</button>
+	<script type="text/javascript">
+		var o = {
+			name: 1 
+					}
+
+		function fn(a,b) {
+			console.log(this);
+			console.log(a + b);
+		}
+		// 不会调用原来函数，而是返回一个改造后的原函数的拷贝
+		var f = fn.bind(o);
+
+		f(1,2);
+		var btn = document.querySelector('button');
+		btn.onclick = function() {
+			btn.disabled = true;
+			setTimeout(function() {
+				this.disabled = false;
+			}.bind(this),3000)
+		}
+	</script>
+</body>
+</html>

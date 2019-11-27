@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+			id : 1,
+			pname : 'xiaomi',
+			price : 1999
+		}
+		// 修改添加对象的属性
+		Object.defineProperty(obj,'num',{
+			value: 1000,
+			enumerable: true
+		})
+		console.log(obj);
+		Object.defineProperty(obj,'price',{
+			value: 9.9
+		})
+		console.log(obj);
+		Object.defineProperty(obj,'id',{
+			writable:false
+		})
+		obj.id = 2;
+		console.log(obj);
+		Object.defineProperty(obj,'adress',{
+			value: 'china',
+			enumerable:true,
+			configurable:false
+		})
+		delete obj.adress;
+		console.log(Object.keys(obj));
+	</script>
+
+</body>
+</html>

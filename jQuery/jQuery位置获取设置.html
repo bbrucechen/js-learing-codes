@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father {
+			width: 400px;
+			height: 400px;
+			background-color: pink;
+			margin: 100px;
+			overflow: hidden;
+			position: relative;
+		}
+		.son {
+			width: 150px;
+			height: 150px;
+			background-color: purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			// offset 获得的是元素距离文档的距离 跟父元素无关系
+			// offset() 获取的是对象保存了top和left offset().top 获取top值 offset().left 获取left值
+			console.log($(".son").offset());
+			// 加参数可以修改 参数为对象形式
+		 	$(".son").offset({
+		 		top:200,
+		 		left:200
+		 	})
+
+		 	// position 获得目标元素距离带有定位的父级元素的距离 如果父级都没有定位 则以文档为准 只能获取不能设置
+		 	console.log($(".son").position());
+
+
+		})
+	</script>
+</body>
+</html>

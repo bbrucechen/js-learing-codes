@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	// 	var randomNum = Math.floor(Math.random()*10+1);
+	// 	console.log(randomNum);
+	// 	while(guessNum != randomNum) {
+	// 	var guessNum = prompt('请输入猜测数字:');
+	// 	if(guessNum > randomNum) {
+	// 		alert('数字大了，继续猜');
+	// 	} else if (guessNum < randomNum) {
+	// 		alert('数字小了，继续猜');
+	// 	} else {
+	// 		alert('猜对了');
+	// 		break;
+	// 	}
+	// }
+	
+
+	var randomNum = Math.floor(Math.random()*50+1);
+		console.log(randomNum);
+		var times = 0;
+		while(guessNum != randomNum && times != 10) {
+		var guessNum = prompt('请输入猜测数字:');
+		if(guessNum > randomNum) {
+			alert('数字大了，继续猜');
+			times++;
+		} else if (guessNum < randomNum) {
+			alert('数字小了，继续猜');
+			times++;
+		} else {
+			alert('猜对了');
+			break;
+		}
+	}
+	if(times == 10) {
+		alert('游戏失败');
+	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

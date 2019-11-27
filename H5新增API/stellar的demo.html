@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css" media="screen">
+	body {
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 1px 0 black, 0 0 5px black;
+		}
+	p {
+	    padding: 0 0.5em;
+	    margin: 0;
+	}
+	.content {
+	    background-attachment: fixed;
+	}
+	#content1 {
+	    background-image: url(1.jpg);
+	}
+	#content2 {
+	    background-image: url(2.jpg);
+	}
+	#content3 {
+	    background-image: url(3.jpg);
+	}
+	#content4 {
+	    background-image: url(4.jpg);
+	}
+	.slow {
+		position: absolute;
+		top: 600px;
+		left: 200px;
+	}
+	.fast {
+		position: absolute;
+		top: 600px;
+		left: 400px;
+	}
+	</style>
+</head>
+<body>
+	<img src="big-01.png" alt="" class="fast" data-stellar-ratio="4">
+	<img src="big.png" alt="" class="slow" data-stellar-ratio="0.2">
+	<div class="content" id="content1" data-stellar-background-ratio="0.2">
+    <p>TEXT HERE</p>
+</div>
+<div class="content" id="content2" data-stellar-background-ratio="0.2">
+    <p>TEXT HERE</p>
+</div>
+<div class="content" id="content3" data-stellar-background-ratio="0.2">
+    <p>TEXT HERE</p>
+</div>
+<div class="content" id="content4" data-stellar-background-ratio="0.2">
+    <p>TEXT HERE</p>
+</div>
+<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.stellar.min.js"></script>
+<script>
+	$(function(){
+		$(".content").height($(window).height());
+		$.stellar({
+    		horizontalScrolling: false, // 设置垂直滚动视差效果
+   			responsive: true
+		});
+	})
+</script>
+</body>
+</html>

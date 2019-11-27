@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<textarea name="" id="message"></textarea>  <button type="">提交</button>
+	<div>
+		
+	</div>
+	<script type="text/javascript">
+		// var str = 'andy和red';
+		// // var newStr = '111';
+		// var newStr = str.replace(/andy/,'111');
+		// console.log(newStr);
+
+		var text = document.querySelector('#message');
+		var btn = document.querySelector('button');
+		var div  = document.querySelector('div');
+		btn.onclick = function() {
+			div.innerHTML = text.value.replace(/激情|gay/g,'**');
+		}
+		// g 全局匹配
+		//i 忽略大小写
+		//gi：全局匹配+忽略大小写
+	</script>
+</body>
+</html>

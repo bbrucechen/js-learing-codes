@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$(document).on("click",function(){
+				console.log("点击了document");
+			})
+			// 事件对象和以前基本一致
+			$("div").on("click",function(e) {
+				e.stopPropagation();
+				console.log("点击了div");
+			})
+		})
+	</script>
+</body>
+</html>

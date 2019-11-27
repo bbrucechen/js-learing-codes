@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var newarr=[];
+		// var oldarr = ['c','a','z','a','x','a','x','c','b','c','a','o'];
+		// function removemulti(arr1,arr2) {
+		// 	for(var i = 0;i < arr1.length;i ++) {
+		// 		if(arr1.indexOf(arr1[i]) == arr1.lastIndexOf(arr1[i])) {
+		// 			arr2.push(arr1[i]);
+		// 		} else {
+		// 			if(i == arr1.indexOf(arr1[i])) {
+		// 				arr2.push(arr1[i]);
+		// 			} 
+		// 		}
+		// 	}
+		// 	return arr2;
+		// }
+		// // 先判断是否是重复的元素，如果不是则直接写到新数组后面。如果是，则再判断其索引值是否是此数组中第一个元素值为此元素值的索引，如果是则push。
+		// console.log(removemulti(oldarr,newarr));
+
+		// 方法2
+		// var newarr=[];
+		// var oldarr = ['c','a','z','a','x','a','x','c','b','c','a','o'];
+		// for(var i = 0;i < oldarr.length;i ++) {
+		// 	while(newarr.indexOf(oldarr[i]) == -1) {
+		// 		newarr.push(oldarr[i]);
+		// 	}
+		// }
+		// console.log(newarr);
+
+		var oldarr = ['c','a','z','a','x','a','x','c','b','c','a','o'];
+		var newarr = [];
+		for(var i =0;i < oldarr.length; i++) {
+			if(newarr.indexOf(oldarr[i]) == -1) {
+				newarr.push(oldarr[i]);
+			}
+		}
+		console.log(newarr);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

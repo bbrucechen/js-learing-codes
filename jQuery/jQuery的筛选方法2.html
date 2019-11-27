@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<ol>
+		<li>1</li>
+		<li>2</li>
+		<li class="item">3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ol>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+	<div class="current">good</div>
+	<div>
+		no
+	</div>
+	<script>
+		$(function(){
+			// .siblings 选择兄弟元素 不包括自己
+			$("ol .item").siblings('li').css("color","red");
+			// .nextAll 选择当前元素后面的所有同辈元素
+			// .prevtAll 选择当前元素前面的所有同辈元素
+			// 第n个元素 
+			// 第一种方法 利用选择器方法
+			$("ul li:eq(2)").css("color","green");
+			// 利用选择方法 推荐这种写法可以直接写入变量
+			$("ul li").eq(4).css("color","pink");
+		})
+	</script>
+</body>
+</html>

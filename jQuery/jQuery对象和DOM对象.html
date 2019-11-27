@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		
+	</style>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div>1111</div>
+	<script type="text/javascript">
+		// 用原生js获取的对象就是DOM对象
+		var div = document.querySelector('div');
+		console.log(div);
+		// 用jquery获得的对象就是jquery对象 本质：通过$把DOM元素进行了包装
+		var jqdiv = $('div');
+		console.dir(jqdiv);
+		// DOM对象只能使用原生js中的属性方法，jquery对象只能使用jquery中的方法，二者不能混淆使用
+		$('div').style.display = 'none'; 
+		div.hide();
+	</script>
+</body>
+</html>

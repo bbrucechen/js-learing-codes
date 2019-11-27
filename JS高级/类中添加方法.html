@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Star {
+			constructor(uname,age) {
+				this.uname = uname;
+				this.age = age;
+			}
+			sing(song) {
+				// console.log('我在唱歌');
+				console.log(this.uname + song);
+			}
+			dance() {
+				console.log('i am dancing');
+			}
+		}
+		var ldh = new Star('刘德华',20);
+		var zxy = new Star('张学友',30);
+		console.log(ldh);
+		console.log(zxy);
+		ldh.sing('冰雨');
+		zxy.sing('李香兰');
+		ldh.dance();
+		zxy.dance();
+
+	</script>
+</body>
+</html>

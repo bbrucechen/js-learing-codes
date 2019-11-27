@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function fn(x,y) {
+			console.log('123');
+			console.log(this);
+			console.log(x + y);
+		}
+		var o = {
+			name: 'andy'
+		}
+		// call作用1 调用函数
+		// fn.call();
+		// call作用2 改变this指向
+		fn.call(o,1,3);
+	</script>
+</body>
+</html>

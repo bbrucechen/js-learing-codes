@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		li {
+			list-style: none;
+			float: left;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		
+		<li>
+		
+			
+		</li>
+		
+		<li>
+		
+			
+		</li>
+		
+		<li>
+		
+		</li>
+	</ul>
+	<script type="text/javascript">
+		var ul = document.querySelector('ul');
+		var finalTime = +new Date('2019-8-18 19:00:00');
+		//先执行一次 防止刷新后显示错误
+		countdown();
+		function countdown() {
+				var currentTime = +new Date();
+				var lefttime = finalTime - currentTime;
+				var hour = parseInt(lefttime / 3600000 % 24);
+				hour = hour > 10? hour:'0'+hour;
+				var minute = parseInt(lefttime / 60000 % 60);
+				minute = minute > 10? minute:'0'+minute;
+				var second = parseInt(lefttime / 1000 % 60);
+				second = second > 10? second:'0'+second;
+				ul.children[0].innerHTML = hour;
+				ul.children[1].innerHTML = minute;
+				ul.children[2].innerHTML = second;
+		}
+		setInterval(countdown,1000);
+		
+
+		// setInterval(function() {
+		// 	if( ul.children[2].innerHTML > 0 ) {
+		// 		ul.children[2].innerHTML --;
+		// 	} else if((ul.children[0].innerHTML != 0 || ul.children[1].innerHTML != 0) && ul.children[2].innerHTML == 0) {
+		// 		ul.children[2].innerHTML = 59;
+		// 	}
+		// },1000)
+
+		// setInterval(function(){
+		// 	if (ul.children[2].innerHTML == 59 && ul.children[1].innerHTML > 0) {
+		// 			ul.children[1].innerHTML --;
+		// 	} else if (ul.children[0].innerHTML != 0 && ul.children[2].innerHTML == 59 ) {
+		// 		ul.children[1].innerHTML = 59;
+		// 	}
+		// },1000)
+
+		// setInterval(function(){
+		// 	if (ul.children[1].innerHTML == 59 && ul.children[0].innerHTML > 0) {
+		// 			ul.children[0].innerHTML --;
+		// 	}
+		// },1000)
+
+	</script>
+</body>
+</html>

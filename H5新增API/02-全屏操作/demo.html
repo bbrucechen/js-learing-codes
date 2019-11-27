@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div:-webkit-full-screen {   /* 注意兼容性问题  全屏显示伪类选择器 某个元素全屏后样式发生变化*/
+		background-color: pink;
+	}
+	</style>
+</head>
+<body>
+<div>
+	<img src="pic1.png" height="300"  alt="">
+	<button id="full">全屏显示</button>
+	<button id="cancelFull">取消全屏</button>
+	<button id="isFull">是否全屏</button>
+</div>
+   <!-- 全屏显示可以是任意元素 -->
+   <!-- 存在兼容性问题 ie9+ 即使是高版本浏览器也有兼容性问题 -->
+
+   <script type="text/javascript">
+   	var div = document.querySelector("div");
+   	// 单机全屏显示
+   	document.querySelector("#full").onclick = function() {
+   		// 请求全屏 不同浏览器需要添加不同前缀 webkit moz o ms
+   		// div.webkitRequestFullScreen(); //开启全屏
+   		// div.mozRequestFullScreen(); //开启全屏
+   		// 做一个兼容性解决方案
+   		if(div.requestFullScreen) {
+   			div.requestFullScreen();
+   		} else if(div.webkitRequestFullScreen) {
+   			div.webkitRequestFullScreen();
+   		} else if(div.mozRequestFullScreen) {
+   			div.mozRequestFullScreen();
+   		} else if(div.msRequestFullscreen) {      // ms 的screen的s必须小写 即div.msRequestFullscreen();
+   			div.msRequestFullscreen();
+   		} 
+   	}
+
+   	// 取消全屏 跟元素没有关系 跟document有关系
+   	document.querySelector("#cancelFull").onclick  = function(){
+   		document.webkitCancelFullScreen();
+   	}
+
+   	// 检测是否全屏
+   	document.querySelector("#isFull").onclick  = function(){
+   		alert(document.webkitIsFullScreen);
+   	}
+   </script>
+	
+</body>
+</html>

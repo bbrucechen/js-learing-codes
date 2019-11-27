@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul class="nav">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<script type="text/javascript">
+		var lis = document.querySelector('.nav').querySelectorAll('li');
+		// 旧方式
+		for(var i = 0;i < lis.length;i++) {
+			lis[i].index = i;
+			lis[i].onclick  = function() {
+				console.log(this.index);
+			}
+		}
+
+		// 闭包方式
+		for(var i = 0;i < lis.length; i++) {
+			(function(index) {
+				lis[index].onclick  = function() {
+					console.log(index);
+				}
+			})(i)
+		}
+		// 就是外面套一个函数用于传i值
+	</script>
+</body>
+</html>

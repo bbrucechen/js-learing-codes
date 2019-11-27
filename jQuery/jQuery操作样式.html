@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<script>
+		$(function(){
+			// $("div").css("color");
+			// 第一种方法 利用css属性 
+			// 如果只写参数 那么返回属性值
+			console.log($("div").css("color"));
+			// 如果修改单个 .css("属性名"，"属性值") 属性名必须加引号 属性值如果是数字则不需要加引号
+			// $("div").css("width","300px");
+			// 如果想修改多个，则以对象方式写入修改的属性 .css({"属性名1":"属性值1"，"属性名2":"属性值2"，"属性名2":"属性值2"}) 如果是符合属性名则应该用驼峰命名法 如果属性值是数字依旧可以不写引号
+			$("div").css({"width":"300px","height":"300px","backgroundColor":"red"});
+		})
+	</script>
+</body>
+</html>

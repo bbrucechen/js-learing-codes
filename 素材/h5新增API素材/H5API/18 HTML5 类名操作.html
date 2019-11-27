@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	 img {
+	 	transition: all .3s;
+	 }
+	 .rotate {
+	 	transform: rotate(720deg);
+	 }
+	</style>
+</head>
+<body>
+	<img src="rotate.jpg" height="238" width="240" alt="">
+	<script>
+	 //jquery  里面  addClass()   removeClass()   hasClass()  toggleClass();
+	 
+	 // html5 提供了 类似 jquery里面操作类名的操作  
+	 
+	// classList.add() 这表示添加一个类名，类似于 addClass()
+	// 
+    // classList.remove() 这表示移除一个类，类似于 removeClass()
+    // 
+    // classList.contains() 这表示是否包含某个类名，类似于 hasClass()
+    // 
+    // classList.toggle() 这表示切换某个类名，类似于 toggleClass()
+
+    
+	 var img = document.querySelector("img");  // 获取img 元素
+	 img.onclick = function() {
+	 	// 1. 追加类名
+	 	// this.className = "rotate"; //  原生 js
+	 	// $(this).addClass('rotate')  jquery 写法
+	 	// this.classList.add("rotate"); // html5 写法  和  jquery是一样的，是追加 ，原生js 会替换
+	    // 2. 删除某个 指定的类名
+	    //this.classList.remove("one");
+	     // this.classList.remove("rotate");
+	    // 3. 切换某个类名  和  toggleClass()  类似
+	     this.classList.toggle("rotate");
+
+	     // 4.  classList.contains(''); 是否含有某个类名
+	     alert(this.classList.contains('rotate'));
+	    
+	 }
+	</script>
+</body>
+</html>

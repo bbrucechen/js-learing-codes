@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr  = [10,30,4];
+		var flag = arr.some(function(value){
+			// return value > 20;
+			return value < 3;
+		})
+		console.log(flag);
+		var arr1 = ['red','pink','blue'];
+		var flag1 = arr1.some(function(value) {
+			return value == 'pink';
+		})
+		console.log(flag1);
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 100px;
+			height:100px;
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<iframe src="open函数.html" name='ww'>
+	</iframe>
+	<script type="text/javascript">
+		var div = document.querySelector("div");
+		var w = document.querySelector("iframe")
+		window.name = 'iframe';
+		div.onclick = function(){
+		console.log(window.frames[0].name);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// 从大到小
+		// var num=[2,56,3,94,23,1,5,3];
+		// var numSwap;
+		// for (var i = 0; i < num.length;i ++)
+		// 	for(var j = i+1; j < num.length;j ++) {
+		// 		if (num[i] < num[j])
+		// 		{
+		// 			numSwap = num[i];
+		// 			num[i] = num[j];
+		// 			num[j] = numSwap;
+		// 		}
+		// 	}
+		// console.log(num);
+
+		// 从小到大
+		var num=[5,4,3,2,1];
+		var numSwap;
+		for (var i = 0; i < num.length;i ++)
+			for(var j = i+1; j < num.length;j ++) {
+				if (num[i] > num[j])
+				{
+					numSwap = num[i];
+					num[i] = num[j];
+					num[j] = numSwap;
+				}
+			}
+		console.log(num);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

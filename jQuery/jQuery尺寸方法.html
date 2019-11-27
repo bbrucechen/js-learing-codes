@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			padding: 10px;
+			margin: 20px;
+			border:10px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<script type="text/javascript">
+		// width()/height() 只能获得内容高宽 没有marigin padding border
+		console.log($("div").width());
+		$("div").width(300);
+		// innerWidth  width + padding
+		$("div").innerWidth(400);
+		console.log($("div").innerWidth());
+		// outerWidth() width + padding+ border
+		console.log($("div").outerWidth());
+		// outerWidth(true) width + padding + border + margin
+		console.log($("div").outerWidth(true));
+		// 以上参数为空 则是获取相应值 返回数字型  如果参数是数字 则是修改相应值 参数不用加单位
+	</script>
+</body>
+</html>

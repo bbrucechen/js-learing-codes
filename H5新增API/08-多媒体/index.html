@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>视频播放</title>
+    <!--字体图标库-->
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/player.css"/>
+</head>
+<body>
+<figure>
+    <figcaption>视频播放器</figcaption>
+    <div class="player">
+        <video src="./video/fun.mp4"></video>
+        <div class="controls">
+            <!--播放/暂停-->
+            <a href="javascript:;" class="switch fa fa-play"></a>
+            <!--播放进度-->
+            <div class="progress">
+                <div class="line"></div>
+                <div class="bar"></div>
+            </div>
+            <!--当前播放时间/播放总时长-->
+            <div class="timer">
+                <span class="current">00:00:00</span> / <span class="total">00:00:00</span>
+            </div>
+            <!--全屏/取消全屏-->
+            <a href="javascript:;" class="expand fa fa-arrows-alt"></a>
+        </div>
+    </div>
+</figure>
+<script src="./js/jquery.min.js"></script>
+<script>
+   // 这些是原生api，用jquery要记得转换
+   // 1.获取元素
+   var video = $("video").get(0); //把jquery对象转为dom对象
+   // 当浏览器可以播放视频时，就让video显示 并让时间显示出来  canplay（）方法为浏览器可以播放视频时
+   video.oncanplay = function(){
+        // 视频显示
+        $(video).show();
+
+        // 获取视频长度并修改 xx.durantion 返回s为单位
+        var totaltime = formatTime(video.duration);
+        $(".total").text(totaltime);
+   }
+   // 计算时分秒函数
+   function formatTime(time) {
+        // 计算小时
+        var h = Math.floor(time / 3600);
+        // 计算时
+        var m = Math.floor( time % 3600 / 60);
+        // 计算秒
+        var s = Math.floor(time % 60);
+        // 返回时：分：秒
+        return (h < 10? "0" + h : h) + ":" + (m < 10? "0" + m : m) + ":" + (s < 10? "0" + s : s);
+   }
+   // 播放和暂停按钮功能
+   // 当点击按钮，如果有fa-play类名 就切换为fa-pause 并且播放
+   $(".switch").on("click",function(){
+    if($(this).hasClass('fa-play')) {
+        video.play(); // 视频播放
+        $(this).addClass('fa-pause').removeClass('fa-play'); //改变按钮图片
+    } else {
+        video.pause(); //视频暂停
+        $(this).addClass('fa-play').removeClass('fa-pause'); // 改变按钮图片
+    }
+   })
+
+   // 进度条显示
+   // ontimeupdate事件：视频播放时间发生变化时触发
+   video.ontimeupdate = function(){
+    // currentTime属性：视频当前的播放时间
+    // line的宽度 = 等于当前时间 / 总的时间 * 100 + %;
+    var w = this.currentTime / this.duration * 430;
+    // 改变长度
+    $(".line").css("width",w);
+    // 更改当前时间显示
+    $(".current").text(formatTime(this.currentTime));
+   }
+
+   // 全屏显示
+   $(".expand").on("click",function(){
+    if($(this).hasClass('fa-arrows-alt')) {
+        $(".player")[0].webkitRequestFullScreen(); // 视频全屏
+        $(this).addClass('fa-compress').removeClass('fa-arrows-alt'); //改变按钮图片
+    } else {
+        $(document)[0].webkitCancelFullScreen(); //视频缩小
+        $(this).addClass('fa-arrows-alt').removeClass('fa-compress'); // 改变按钮图片
+    }
+   })
+
+   // 视频结束重置操作
+   video.onended = function(){
+    // 当前的视频时间清零
+    video.currentTime = 0;
+    $(".switch").addClass('fa-play').removeClass('fa-pause');
+   }
+
+   //点击跃进效果
+    $(".bar").on("click",function(e){
+      // 获取点击位置 / bar的长度 * 总的时长 = 播放的时间
+      // 1.点击位置和 offsetX 可以获取在当前盒子的坐标
+      var offset = e.offsetX;
+      // 修改当前播放时间
+      video.currentTime  = offset / this.clientWidth * video.duration;
+    })
+</script>
+</body>
+</html>

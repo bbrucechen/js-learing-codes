@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ol>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ol>
+	<div class="box">
+		<span class="erweima">
+			
+		</span>
+	</div>
+	<script type="text/javascript">
+		//1.父节点 parentNode
+		var erweima = document.querySelector('.erweima');
+		console.log(erweima.parentNode);
+		//得到的是离最近的父级节点 如果找不到则返回为null
+		//2.子节点 childNotes 包含所有的节点 包括空格换行等 可通过nodeType筛选
+		var ul = document.querySelector('ul');
+		console.log(ul.childNodes);
+		// 子节点第二种方式 node.children 只获得元素节点
+		console.log(ul.children);
+		var ol = document.querySelector('ol');
+		//获取第一个子节点 node.firstChild 返回的是所有节点 
+		console.log(ol.firstChild);
+		// 最后一个
+		console.log(ol.lastChild);
+		// firstElementChild 返回第一个子元素节点
+		console.log(ol.firstElementChild);
+		console.log(ol.lastElementChild);
+		// 实际开发是利用node.children 利用索引值获取
+		//获取第一个
+		console.log(ol.children[0]);
+		//获取第一个
+		console.log(ol.children[ol.children.length-1]);
+	</script>
+</body>
+</html>

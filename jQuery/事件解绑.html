@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		$(function(){
+			$("div").on({
+				click:function(){
+					console.log(11);
+				},
+				mouseover:(function(event) {
+					console.log(22);
+				})
+			})
+			$("ul").on("click","li",function() {
+				alert(11);
+			})
+			$("ul").off("click","li");
+			// 事件解绑 off
+			// $("div").off();   解绑所有事件
+			 $("div").off("click"); //解绑指定事件
+
+			 // 如果有的事件只想触发一次 那就用one（） 语法与on相同 但是只会触发一次
+			 $("p").one("click",function(){
+			 	alert(11);
+			 })
+		})
+	</script>
+	<div>
+		
+	</div>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+
+	</ul>
+	<p>223</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		td {
+			border-bottom: 1px solid blue;
+			/*background-color: red;*/
+		}
+		th {
+			border-bottom: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption>11111</caption>
+		<thead>
+			<tr>
+				<th>11111</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>22222</td>
+			</tr>
+			<tr>
+				<td>22222</td>
+			</tr>
+			<tr>
+				<td>333333</td>
+			</tr>
+			<tr>
+				<td>444444</td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		var td = document.querySelectorAll('td');
+		for(var i = 0;i< td.length;i++) {
+		td[i].onmousemove = function() {
+			this.style.backgroundColor = 'pink';
+		}
+		td[i].onmouseout = function() {
+			this.style.backgroundColor = '';
+		}
+	}
+	</script>
+</body>
+</html>

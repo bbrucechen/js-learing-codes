@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type="">删除</button>
+	<ul>
+		<li>熊大</li>
+		<li>熊二</li>
+		<li>光头强</li>
+	</ul>
+	<script type="text/javascript">
+		var btn = document.querySelector('button');
+		var ul = document.querySelector('ul');
+		//删除元素 node.removeChild()
+		btn.onclick = function() {
+		ul.removeChild(ul.children[0]);
+	}
+	</script>
+</body>
+</html>

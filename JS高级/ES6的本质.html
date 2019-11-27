@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>	
+	<script>
+		// ES6之前通过构造函数+原型实现面向对象编程
+
+		// ES6通过 类 实现面向对象编程
+		class Star {
+			move() {
+				console.log('11');
+			}
+		}
+		console.dir(Star);
+		console.log(typeof Star);
+		// 类的本质其实还是一个函数 
+		console.log(Star.prototype);
+		console.log(Star.prototype.constructor);
+		Star.prototype.sing = function() {
+			console.log('111');
+		}
+		var ldh = new Star();
+		console.dir(ldh.__proto__ === Star.prototype);
+</body>
+</html>

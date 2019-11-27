@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type=""></button>
+	<script type="text/javascript">
+		// 全局作用域或者普通函数中this指向全局对象window 
+		console.log(this);
+
+		function fn() {
+			console.log(this);
+		}
+		fn();
+		setTimeout(function() {
+			console.log(this);
+		},1000);
+
+		// 方法调用中
+		var o = {
+			sayHi: function() {
+				console.log(this);   //指向o 因为这个函数是o的 
+			}
+		}
+		o.sayHi();
+
+		var btn = document.querySelector('button');
+		// btn.onclick = function() {
+		// 	console.log(this);
+		// }
+		btn.addEventListener('click',function() {
+			console.log(this);
+		})
+		// 构造函数this指向构造函数的实例
+		function Fun() {
+			console.log(this);  //指向fun()
+		}
+		var fun = new Fun();
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="grandfather">
+		<div class="father">
+		<div class="son"></div>
+		</div>
+	</div>	
+	<div class="nav">
+		<p>11</p>
+		<div>
+			<p>22</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			// 1.父  .parent 返回最近一级的父级元素
+				console.log($(".son").parent());
+			// 2.子
+			// 只选亲儿子 children()
+			$(".nav").children("p").css("color","red");
+			//选所有后代
+			$(".nav").find("p").css("color","red");
+			// 3.兄
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<button class="begin">start</button>
+	<button class="stop">stop</button>
+	<script type="text/javascript">
+		var timer = null;
+		var begin = document.querySelector('.begin');
+		var stop = document.querySelector('.stop');
+		 begin.addEventListener('click',function() {
+			timer = setInterval(function(){
+				console.log('hello?');
+			},1000)
+		})
+		stop.addEventListener('click',function() {
+			clearInterval(timer);
+		})
+	</script>
+</body>
+</html>

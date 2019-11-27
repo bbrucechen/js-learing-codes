@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="one">
+		<div class="two">
+			<div class="three">
+				<div class="four">111</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		// 利用.parents可以返回指定父级元素
+		console.log($(".four").parents());
+		console.log($(".four").parents(".one"));
+
+	</script>
+</body>
+</html>

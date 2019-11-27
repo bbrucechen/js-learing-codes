@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>11</div>
+	<script type="text/javascript">
+			var div = document.getElementByTagName('div');
+			div.onclick = function(e) {
+				// console.log(e);
+				// 兼容写法
+				e = e || window.event;
+				console.log(e);
+			}
+			//有兼容性问题 ie678不识别 
+	</script>
+</body>
+</html>

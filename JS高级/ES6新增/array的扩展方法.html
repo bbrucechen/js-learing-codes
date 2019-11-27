@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<script type="text/javascript">
+		// ...ary 可以将数组分成以逗号分隔的形式 可应用于形参数组中
+		let ary = [1,2,3];
+		console.log(...ary);
+		function add(a,b,c) {
+			console.log(a + b + c);
+		} 
+		add(...ary);
+
+		// 扩展运算符可以应用于合并数组
+		// 方法1：
+		let ary1 = [1,2,3];
+		let ary2 = [2,3,4];
+		let ary3 = [...ary1,...ary2];
+		console.log(ary3);
+		// 方法2：
+		ary1.push(...ary2);
+		console.log(ary1);
+
+
+		// 利用扩展运算符将伪数组转化为真正的数组
+		var divs = document.querySelectorAll('div');
+		console.log(divs instanceof Array);
+		divs = [...divs];
+		console.log(divs instanceof Array);
+	</script>
+</body>
+</html>

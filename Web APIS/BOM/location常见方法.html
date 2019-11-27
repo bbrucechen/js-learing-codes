@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type="">1</button>
+	<script type="text/javascript">
+		var btn =document.querySelector('button');
+		btn.addEventListener('click',function() {
+			//assign 与href一样，实现跳转
+			location.assign('http://www.baidu.com');
+			//实现跳转 但是不记录历史 没有退回功能
+			// location.replace('http://www.baidu.com');
+			//重新加载刷新  等于f5
+			location.reload('http://www.baidu.com');
+			location.reload(true); //强制刷新
+		})
+	</script>
+</body>
+</html>

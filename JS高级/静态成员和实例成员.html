@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Star(uname,age) {
+			this.uname = uname;
+			this.age = age;
+			this.sing= function() {
+				console.log('我会唱歌');
+			}
+		}
+		var ldh = new Star('刘德华',20);
+		// 实例成员就是构造函数内部通过this添加的成员 uname sing age就是
+		// 实例成员能通过实例来访问
+		// 实例成员不能通过构造函数访问
+		console.log(Star.uname);
+
+		// 静态成员 构造函数本身上添加的成员
+		Star.sex = 'man';
+		console.log(Star.sex);
+		console.log(ldh.sex);
+	</script>
+</body>
+</html>

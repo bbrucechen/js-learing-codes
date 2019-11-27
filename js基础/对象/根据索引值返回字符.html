@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// charAt(indes)
+		// var str='1234';
+		// var a = str.charAt(1);
+		// console.log(a);
+		// // charCodeAt(index) 返回相应位置字符的ASCII码  用于判断用户按下哪个键
+		// console.log(str.charCodeAt(0));
+		// // str[index] H5支持
+		// console.log(str[1]);
+		// 寻找出现次数最多的字符并且返回出现次数 方法1
+		// var str1 = 'abcxxxxxxxxxoefoxyozzoppppppp';
+		// var times = 0;
+		// var nth;
+		// for(var i = 0;i < str1.length;i++) {
+		// 	var num =1;
+
+		// 	for(var j =i+1; j < str1.length;j++) 
+		// 		if(str1[j]==str1[i]) {
+		// 			num +=1;
+		// 		}
+			
+		// 	if(num > times) {
+		// 		times = num;
+		// 		nth=i;
+		// 	}
+
+		// }
+		// max = Math.max(num);
+		// console.log('出现最多次的为'+str1[nth]+'此数为'+times+'次');
+
+		// 寻找出现次数最多的字符并且返回出现次数 方法2
+		var str1 = 'abcoefoxyozzopp';
+		var o = {};
+		for(var i = 0;i < str1.length;i ++) {
+			var char = str1[i];
+			if(o[char]) {    //因为char本身是字符串 所以不能用o.char 也不能加''
+				o[char] ++;
+			} else {
+				o[char] = 1;
+			}
+		}
+		console.log(o);
+		var max = 0;
+		var ch = '';
+		for(var k in o) {
+			if(o[k] > max) {
+				max = o[k];
+				ch = k;
+			}
+		}
+		console.log(max);
+		console.log('最多的字符'+ch);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var computer = {
+		// 	color: 'black',
+		// 	weight: '40kg',
+		// 	brand: 'acer',
+		// 	type: 'traelmate',
+		// 	function: function() {
+		// 		console.log('watch movie'+'listen music'+'play video games'+'typing code')
+		// 	}
+		// }
+		// for (var k in computer) {
+		// 	console.log(computer[k]);
+		// }
+
+		// var button = new Object();
+		// button.width='100px';
+		// button.height='100px';
+		// button.backgroundcoloe='red';
+		// button.onclick = function() {
+		// 	console.log('hahaha');
+		// }
+		// for(var k in button) {
+		// 	console.log(button[k]);
+		// }
+
+		// function Car(weight,color,brand) {
+		// 	this.weight=weight,
+		// 	this.color=color,
+		// 	this.brand=brand,
+		// 	this.function=function(){
+		// 		console.log('driving people'+'carrying goods'+'farming');
+		// 	}
+		// }
+		// var cars = new Car('2t','black','toyota');
+		// for(var k in cars) {
+		// 	console.log(cars[k]);
+		// }
+
+		// function swapgroup(arr) {
+		// 	for(var i = 0;i < arr.length/2;i ++) {
+		// 		var swap = arr[i];
+		// 		arr[i] = arr[arr.length-1-i];
+		// 		arr[arr.length-1-i] = swap;
+		// 	}
+		// }
+		// num=[2,4,1,99,2.1];
+		// swapgroup(num);
+		// console.log(num);
+
+		// function sort(arr) {
+		// 	for(var i=0;i<arr.length;i++)
+		// 		for(var j=i;j<arr.length;j++) {
+		// 			var swap;
+		// 			if(arr[j] > arr[i]) {
+		// 				swap = arr[i];
+		// 				arr[i] =arr[j];
+		// 				arr[j]= swap;
+		// 			}
+		// 		}
+		// }
+		// num1=[1,2,99,0.1,33];
+		// sort(num1);
+		// console.log(num1);
+
+		var option;
+		while(option != 5) {
+			option = parseInt(prompt('欢迎使用简易计算器:'+'\n'+'1.加法运算'+'\n'+'2.减法运算'+'\n'+'3.乘法运算'+'\n'+'4.除法运算'+'\n'+'5.退出'+'\n'+'请输入您的选项'));
+ 		switch(option) {
+			case 1 : 
+			var num1 = parseInt(prompt('请输入一个数'));
+			var num2 = parseInt(prompt('请输入一个数'));
+			alert(num1+num2);
+			break;
+			case 2 : 
+			var num1 = parseInt(prompt('请输入一个数'));
+			var num2 = parseInt(prompt('请输入一个数'));
+			alert(num1-num2);
+			break;
+			case 3 : 
+			var num1 = parseInt(prompt('请输入一个数'));
+			var num2 = parseInt(prompt('请输入一个数'));
+			alert(num1 * num2);
+			break;
+			case 4 : 
+			var num1 = parseInt(prompt('请输入一个数'));
+			var num2 = parseInt(prompt('请输入一个数'));
+			alert(num1 / num2);
+			break;		
+		}
+	}
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

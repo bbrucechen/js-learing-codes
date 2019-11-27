@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div>1</div>
+	<div>3</div>
+	<div>2</div>
+	<script type="text/javascript">
+		var arr = ["red","yellow","blue"];
+		var sum = 0;
+		// 元素.each(function(index,domEle){}) index为索引值，domEle为每个DOM元素，注意是DOM元素不是jQuery元素，要使用jQuery方法必须加$
+		$("div").each(function(index,domEle) {
+			console.log(index);
+			// domEle.css("color","red"); // 错误
+			$(domEle).css("color",arr[index]);
+			sum += parseInt($(domEle).text());
+			// 注意返回的是字符串 要转为数字型
+		})
+		console.log(sum);
+		$(arr).each(function(index,domEle){
+			console.log(index);
+			console.log(domEle);
+		})
+		var obj = {
+			uname:"bruce",
+			age:100
+		}
+		$(obj).each(function(index,domEle){
+			console.log(index);
+			console.log(domEle);
+		})
+		// $.each() 主要用于遍历数据
+		$.each($("div"),function(i,ele){
+			console.log(i);
+			console.log(ele);
+		})
+		$.each(arr,function(i,ele){
+			console.log(i);
+			console.log(ele);
+		})
+		$.each({name:"andy",age:"19"},function(i,ele){
+			console.log(i); 
+			console.log(ele);
+		})
+</script>
+</body>
+</html>

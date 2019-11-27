@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		.current {
+			background-color: blue;
+		}
+		.new {
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<script type="text/javascript">
+		// addClass('class_name') 添加类名
+		// $("div").click(function(){
+		// 	$(this).addClass('current');
+		// })
+		// removeClass('class name') 移除类名
+		// $("div").dblclick(function(){
+		// 	$(this).removeClass('current');
+		// })
+		// toggleClass('selector'); 切换类名 无则切换 有则取消
+		$("div").click(function(){
+	$(this).toggleClass('new');
+})
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>第1个li</li>
+		<li class="demo">第2个li</li>
+		<li>第3个li</li>
+		<li>第4个li</li>
+		<li class="demo">
+			我不是段落
+			<p>我是段落</p>
+		</li>	
+	</ul>
+	<script>
+      // document.getElementById(id)  获取一个元素
+      // document.getElementsByTagName("li")   获取 某类 标签元素  伪数组
+      // document.getElementsByName(name) 获取 名字元素  伪数组
+      // html5 新增的 获取元素   document.querySelector(选择器);
+      // query 查询  selector 选择器
+      // 选择器 标签  类  id  后代  子代 ...
+      //1.  querySelector 类似于 jquery $("li")[0]   但是只选取第一个符合条件的元素
+      // var li = document.querySelector("li");  里面放的是标签选择器
+    //  var li = document.querySelector(".demo");  jquery $(".demo")[0] 里面放的是类选择器
+       //  var li = document.querySelector(".demo p"); jquery $(".demo p")[0] 里面放的是后代选择器
+      // console.log(li);
+      //  li.style.color = "red";
+
+      // 2. document.querySelectorAll("选择器")  选择所有的  $()  但是只能选取 得到一个伪数组
+      // 
+      //var lis = document.querySelectorAll("li");
+      var lis = document.querySelectorAll(".demo");
+      // console.log(lis);
+      //lis.style.color = "red";   此时得到的是一个伪数组 里面包含所有的li   getElementsByTagName("li")
+      // 如果想要 操作里面的所有元素 必须遍历
+      for(var i = 0 ;i< lis.length; i++) {
+      	lis[i].style.color = "red";
+      }
+	</script>
+</body>
+</html>

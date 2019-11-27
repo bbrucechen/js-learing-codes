@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 闭包（closure） 指有权限访问另一个函数作用域中变量的函数
+		// 闭包：我们fun 这个函数作用域 访问了另外一个函数fn里面的局部变量 num 形成了闭包
+		function fn() {
+			var num = 10;
+			function fun() {
+				console.log(num);	
+			}
+			return fun;
+		}
+		var f = fn();
+		f();
+
+		// var num =10;
+		// function fn() {
+		// 	console.log(num);
+		// }
+		// fn();
+	</script>
+</body>
+</html>

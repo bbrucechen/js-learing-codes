@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		body {
+            height: 2000px;
+        }
+        
+        .back {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            right: 30px;
+            bottom: 100px;
+            display: none;
+        }
+        
+        .container {
+            width: 900px;
+            height: 500px;
+            background-color: skyblue;
+            margin: 400px auto;
+        }
+	</style>
+</head>
+<body>
+	<div class="back">return</div>
+	<div class="container"></div>
+	<script type="text/javascript">
+		$(function(){
+			// .scroll 页面滚动事件
+			$(window).scroll(function(){
+				// scrollTop() 获取元素被卷曲头部距离  加参数可以修改卷动距离 也可应用于动画
+				// console.log($(document).scrollTop());
+				if($(document).scrollTop() >= $(".container").offset().top) {
+					$(".back").show();
+				} else {
+					$(".back").hide();
+				}
+				$(".back").click(function(){
+				$("html").stop().animate({scrollTop:0});
+			})	
+			})	
+		})
+	</script>
+</body>
+</html>

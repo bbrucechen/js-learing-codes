@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+	<div id="time">2019-9-9</div>
+	<script type="text/javascript">
+		// 1.因为文档页面从上往下加载，所以先得有标签，script写到标签下面
+		// 2.参数id是大小写敏感的字符串 一定要加引号
+		//3.返回的是一个文档对象object
+		var timer = document.getElementById('time');
+		console.log(timer);
+		console.log(typeof timer);
+		// console.dir 打印对象且能更好查看里面的属性和方法
+		console.dir(timer);
+	</script>
+</body>
+</html>

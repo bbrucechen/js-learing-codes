@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var name = 'the window';
+		var object = {
+	name: 'my object',
+	getNameFunc: function() {
+		return function() {
+			return this.name;
+		};
+	}
+};
+		console.log(object.getNameFunc()()); // 无闭包
+
+
+
+
+		var name = 'the window';
+		var object = {
+			name: 'my object',
+			getNameFunc: function() {
+				var that =this;
+				return function() {
+					return that.name;
+				};
+			}
+		};
+		console.log(object.getNameFunc()()); //有闭包
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// function 构造函数名() {
+		// 	this.属性 = 值;
+		// 	this.方法 = function() {}
+		// }
+
+		// new 构造函数名();
+
+		function Star(uname,age,sex) {
+			this.name = uname;
+			this.age = age;
+			this.sex = sex;
+		}
+		// 1.构造函数名字首字母要大写
+		var ldh = new Star('ldh',18,'male');
+		// 2.构造函数不需要return
+		console.log(typeof ldh);
+		console.log(ldh.name);
+		console.log(ldh.sex);
+		console.log(ldh.age);
+		var zxy = new Star('zxy',19,'male');
+		var lm = new Star('lm',20,'male');
+		console.log(zxy.name);
+		console.log(zxy.sex);
+		console.log(zxy.age);
+		console.log(lm.name);
+		console.log(lm.sex);
+		console.log(lm.age);
+		// 3.调用构造函数 必须使用new
+		// 4.必须使用this
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

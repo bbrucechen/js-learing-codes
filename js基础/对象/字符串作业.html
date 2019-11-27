@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var str = 'abaasdffggghhjjkkgfddsssss3444343';
+		var length = str.length;
+		console.log('长度为'+length);
+
+		console.log(str.charAt(0) + str.charAt(3) + str.charAt(5) + str.charAt(9));
+
+		//判断是否存在
+		function isExist(str1) {
+		if (str.indexOf(str1) != -1) {
+			console.log(str1 + '存在');
+		} else {
+			console.log(str1 + '不存在');
+		}
+	}
+		isExist('i');
+		isExist('f');
+
+		//替换指定字符
+		function replacement(str1,str2) {
+			while(str.indexOf(str1) != -1) {
+				str = str.replace(str1,str2);
+			}
+			console.log(str);
+		}
+		replacement('g','22');
+		replacement('ss','t');
+
+		// 截取指定开始位置到结束位置的字符串 
+		strnew = str.substr(1,5);
+		console.log(strnew);
+
+		//找出字符串中出现次数最多的字符和出现的次数 
+		var obj = {};
+		var max = 0;
+		var strone;
+		function statistical(str1,obj1) {
+			for(var index = 0;index < str1.length;index ++) {
+				var char = str1.charAt(index);
+				if(obj1[char]) {
+					obj1[char] ++;
+				} else {
+					obj1[char] = 1;
+				}
+			}
+		}
+		statistical(str,obj);
+		for(k in obj) {
+			if(obj[k]>max) {
+				max = obj[k];
+				strone = k;
+			} 
+		}
+		console.log('most'+strone+'number'+max);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

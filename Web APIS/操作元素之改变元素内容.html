@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		div,
+		p,span {
+			width: 300px;
+			height: 30px;
+			line-height: 30px;
+			color: #fff;
+			background-color: pink;	
+		}
+	</style>
+</head>
+<body>
+	<button type="">显示当前系统时间</button>
+	<div>某个时间</div>
+	<p>123</p>
+	<span>123456</span>
+	<div class="one">时间</div>
+	<script type="text/javascript">
+		//点击按钮 div文字内容发生变化
+		//1.获取元素
+		var btn = document.querySelector('button');
+		var div = document.querySelector('div');
+		//2.注册事件
+		btn.onclick= function() {
+			div.innerText = getDate();
+		}
+
+		function getDate() {
+		var date = new Date();
+		var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+		var dates = date.getDate();
+		var day = date.getDay();
+		var hour = date.getHours();
+		var minute = date.getMinutes();
+		var second = date.getSeconds();
+		return '今天是' + year + '年' + month + '月' + dates + '号 ' + arr[day] + '\t' + hour + ':' + minute + ':' + second;
+		}
+		//元素可以不用添加事件
+		var p = document.querySelector('p');
+		p.innerText = getDate() 
+
+		var time1 = document.querySelector('.one');
+		function getDate1() {
+		var date = new Date();
+		var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+		var dates = date.getDate();
+		var day = date.getDay();
+		var hour = date.getHours();
+		var minute = date.getMinutes();
+		var second = date.getSeconds();
+		return '今天是' + year + '年' + month + '月' + dates + '号 ' + arr[day] + '\t' + hour + ':' + minute + ':' + second;
+		}
+		btn.onclick = function () {
+			time1.innerText = getDate1();
+		}
+		var span1 = document.querySelector('span');
+		span1.innerText = getDate1();
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div>
+		<span>123</span>
+	</div>
+	<input type="" name="" value="请输入">
+	<script type="text/javascript">
+		// 获取设置元素内容 元素.html() 相当于 原声中的innerHTML 获得的包括标签
+		console.log($("div").html());
+		$("div").html("345");
+		// 获取设置元素文本内容 元素.text（） 只获取文本 等于innerText
+		console.log($("div").text());
+		$("div").text("jjj");
+		// 获取设置表单值 val（） 等于value
+		$("input").val();
+		console.log($("input").val());
+		$("input").val("123");
+	</script>
+</body>
+</html>

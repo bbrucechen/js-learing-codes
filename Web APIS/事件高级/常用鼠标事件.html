@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	11111111111111
+	<script type="text/javascript">
+		// 1. contextmenu 一般用于显示上下文菜单
+		document.addEventListener('contextmenu',function(e){
+			e.preventDefault();
+		})
+		// 禁止选中文字 selectstart
+		document.addEventListener('selectstart',function(e) {
+			e.preventDefault();
+		})
+	</script>
+</body>
+</html>

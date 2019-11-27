@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<script type="text/javascript">
+		// Array.from 可将伪数组或其他可遍历对象转换成数组 不改变原数组
+		// 当转换对象时，里面的属性名应该加上双引号
+		var arrayLike = {
+			"0":"zs",
+			"1":"ls",
+			"2":"ww",
+			"length":3
+		}
+
+		var arr = Array.from(arrayLike);
+		console.log(arr);
+
+		var weishuzu = document.querySelectorAll('div');
+		var arr1 = Array.from(weishuzu);
+		console.log(arr1 instanceof Array);
+
+		
+		//Array.from 的第二个参数为函数，可以对数组中每个值进行操作
+		let arrayLike2 = {
+			"0":1,
+			"1":2,
+			"length":2
+		}
+		let newary  = Array.from(arrayLike2,item => item * 2);
+		console.log(newary);
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		li {
+			background-color: pink;
+			width: 300px;
+		}
+		li a  {
+			float: right;
+			text-decoration: none;
+			color: #ccc;
+		}
+		textarea {
+			width: 500px;
+			height: 100px;
+		}
+	</style>	
+</head>
+<body>
+	<textarea name="" id="text"></textarea>
+	<button type="">发布</button>
+	<ul>
+		
+	</ul>
+	<script type="text/javascript">
+		var textarea = document.querySelector('textarea');
+		var btn = document.querySelector('button');
+		var ul = document.querySelector('ul');
+		
+		btn.onclick = function() {
+			if(textarea.value == '') {
+				alert('你没有输入内容');
+			} else {
+				//创建元素
+			var li = document.createElement('li');
+			//赋值
+			li.innerHTML = textarea.value + '<a href="javascript:;">删除</a>'; 
+			//添加元素
+			ul.insertBefore(li,ul.children[0]);
+			//删除元素
+			var as = document.querySelectorAll('a');
+			for(var i =0;i < as.length;i++) { 
+				as[i].onclick = function() {
+				ul.removeChild(this.parentNode);
+				}
+			}
+					}
+		}
+			
+	</script>
+</body>
+</html>

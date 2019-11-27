@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		div {
+			width:200px;
+			height:200px;
+			background-color: pink;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+		window.addEventListener('load',function(){
+				//只要窗口大小发生变化 ，就会触发   可用来完成响应式布局
+		var div =document.querySelector('div');
+		window.addEventListener('resize',function(){
+			console.log('变化了');
+			console.log(window.innerWidth);
+			if(window.innerWidth < 800) {
+				div.style.display = 'none';
+			} else {
+				div.style.display = 'block';
+			}
+		})
+		})
+	
+	</script>
+	<div></div>
+</body>
+</html>

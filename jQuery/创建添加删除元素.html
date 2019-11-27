@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<ul>
+		<li>old</li>
+	</ul>
+	<div class="test">111</div>
+	<script type="text/javascript">
+		// 创建元素
+		var li = $("<li>new</li>");
+		// 添加元素
+		// (1) 内部添加 append 放到元素最后 类似于原生appendChild
+		$("ul").append(li);
+		 		// prepand  放到元素最前面
+		$("ul").prepend(li);
+		// (2) 外部添加
+		var div = $("<div>new</div>");
+		// after 内容放到目标元素后面
+		$(".test").after(div);
+		// before 内容放到目标元素之前
+		$(".test").before(div);
+		// 内部添加为父子关系 外部添加为兄弟关系
+
+		// 删除元素
+		// 删除匹配的元素本身 自杀
+		// $("ul").remove();
+		// 删除匹配的元素的子节点 不删除本身 
+		// $("ul").empty();
+		// $("ul").html(""); 等价于empty
+		
+
+	</script>
+</body>
+</html>

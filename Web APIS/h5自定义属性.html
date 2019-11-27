@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div data-time="2" data-list-name='andy'></div>
+	<script type="text/javascript">
+		var div = document.querySelector('div');
+		div.setAttribute('data-index',2);
+		console.log(div.getAttribute('data-time'));
+		console.log(div.getAttribute('data-list-name'));
+
+		//h5 新增的获取自定义属性的方法
+		console.log(div.dataset)
+		console.log(div.dataset.time);
+		console.log(div.dataset.index);
+		console.log(div.dataset['index']);
+		console.log(div.dataset.listName);
+		console.log(div.dataset['listName']);
+
+
+	</script>
+</body>
+</html>

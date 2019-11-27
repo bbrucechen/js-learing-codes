@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var i = 0;
+		function fn() {
+			if(i == 6) return;
+			console.log(i++)
+			fn();
+
+		}
+		fn();
+
+		
+	</script>
+</body>
+</html>

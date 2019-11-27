@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//  立即执行函数 立即执行无需调用
+		//写法 
+		// (function(){})()   (function() {}())
+		(function(){
+			console.log('2');
+		})();
+
+		(function(a,b) {
+			console.log(a+b);
+		})(1,2);
+		(function(a,b) {
+			console.log(a-b);
+		} (3,2));
+		//立即执行函数的最大作用就是 独立创建了一个作用域
+	</script>
+</body>
+</html>

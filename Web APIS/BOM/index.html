@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div></div>
+	<script type="text/javascript">
+			console.log(location.search);
+			//先截取
+			var params = location.search.substr(1,10);
+			console.log(params);
+			//在分割
+			var arr = params.split('=');
+			console.log(arr);
+			var div = document.querySelector('div');
+			div.innerHTML = arr[1]+'欢迎您';
+	</script>
+
+</body>
+</html>

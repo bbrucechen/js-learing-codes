@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="demo">点击这个按钮，获得您的坐标：</p>
+	<button onclick="getLocation()">试一下</button>
+	<script>
+		var x=document.getElementById("demo");
+
+		function getLocation()   // 当我们点击了按钮就会触发这个函数
+		  {
+		  if (navigator.geolocation)  // 判断我们当前的设备是否支持 地理定位 
+		    {
+
+		    	// 如果支持 就 获得当前的 地理位置  调用  getCurrentPosition 方法
+		    navigator.geolocation.getCurrentPosition(showPosition,showError);
+		       // showPosition  如果调用成功  调用这个函数 显示 当前位置
+		       // showError   如果调用失败  调用这个函数 
+		    }
+		     
+		  else{  // 如果设备不支持  就返回这句话  当前浏览器不支持 地理定位
+		  	x.innerHTML="Geolocation is not supported by this browser.";}
+		  }
+
+
+		  	// 调用 成功的函数   返回当前位置的经纬度
+		function showPosition(position)
+		  {
+		  x.innerHTML=  
+
+		  "Latitude: " + position.coords.latitude +    //  获得当前的纬度
+
+		  "<br />Longitude: " + position.coords.longitude;	 // 获得当前的经度
+		  }
+        // 调用 失败 的函数   返回当前位置的经纬度
+		function showError(error)
+		  {
+		  switch(error.code) 
+		    {
+		    case error.PERMISSION_DENIED:
+		      x.innerHTML="User denied the request for Geolocation."
+		      // 用户无法定位的要求
+		      break;
+		    case error.POSITION_UNAVAILABLE:
+		      x.innerHTML="Location information is unavailable."
+		      // 位置信息不可用
+		      break;
+		    case error.TIMEOUT:
+		      x.innerHTML="The request to get user location timed out."
+		      // 获取用户位置的请求超时。
+		      break;
+		    case error.UNKNOWN_ERROR:
+		      x.innerHTML="An unknown error occurred."
+		      // 发生了一个不明错误
+		      break;
+		    }
+		  }
+	</script>
+</body>
+</html>

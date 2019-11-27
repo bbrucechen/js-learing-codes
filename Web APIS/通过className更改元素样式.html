@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+		.change {
+			background-color: purple;
+			color: #fff;
+			font-size: 25px;
+			margin-top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="first" >文本</div>
+	<script type="text/javascript">
+		var test = document.querySelector('div');
+		test.onclick = function() {
+			//将当前类名改为change 从而改变样式
+			// this.className = 'change';
+			//若想保留新旧类名 则可以
+			this.className = 'first change';
+		}
+	</script>
+</body>
+</html>

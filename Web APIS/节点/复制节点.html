@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<script type="text/javascript">
+		var ul = document.querySelector('ul');
+		//1.node.cloneNode() 括号里为空或者是false 则为浅拷贝 只复制标签不复制里面的子节点
+		// var lili = ul.children[0].cloneNode();
+		// ul.appendChild(lili);
+		//2.node.cloneNode(true) 会复制节点本身及里面所有子节点
+		var lili = ul.children[0].cloneNode(true);
+		ul.appendChild(lili);
+	</script>
+</body>
+</html>

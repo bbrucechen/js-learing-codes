@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//用instanceof
+		var arr = [];
+		var obj = {};
+		console.log(arr instanceof Array); // 返回true
+		console.log(arr instanceof Array); // 返回false
+
+		function reverse(array) {
+			var swap;
+			if (array instanceof Array ) {
+				for(var i = 0;i < array.length/2;i++) {
+					swap = array[i];
+					array[i] = array[array.length-1-i];
+					array[array.length-1-i] = swap;
+				}
+				console.log(array);
+			} else {
+				console.log('输入参数必须为数组');
+			}
+		}
+		reverse([1,2,3]);
+		reverse(1,2,3);
+		// 用Array.isArray(参数)
+		Array.isArray([1,2,3]); // TRUE
+		Array.isArray(1,2,3); // FALSE
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

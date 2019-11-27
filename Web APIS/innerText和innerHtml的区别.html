@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div></div>
+	<p>
+		123
+		<span>234</span> 
+	</p>
+	<script type="text/javascript">
+		var div = document.querySelector('div');
+		//innerText 不识别html标签 非标准 会去除空格和换行
+		div.innerText = '<strong>123</strong>';
+		//innerHTML 识别html标签 W3C标准
+		div.innerHTML = '<strong>123</strong>';
+		//这两个属性可读写 可以获取元素内的内容
+		var p = document.querySelector('p');
+		console.log(p.innerText);
+		console.log(p.innerHTML);
+
+	</script>
+</body>
+</html>

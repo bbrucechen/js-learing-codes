@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var date = new Date();
+		console.log(date.getFullYear()); // 返回当前年份
+		console.log(date.getMonth() + 1); // 返回当前月份 从0开始 返回的月份小一个月 记得加一
+		console.log(date.getDate()); // 返回的是日
+		console.log(date.getDay());//  周日返回的是0 其他正常
+		// 写一个 2019年5月1日 星期三
+		var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+		var dates = date.getDate();
+		var day = date.getDay();
+		var hour = date.getHours();
+		var minute = date.getMinutes();
+		var second = date.getSeconds();
+		console.log('今天是' + year + '年' + month + '月' + dates + '号 ' + arr[day] + '\t' + hour + ':' + minute + ':' + second);
+        
+        function getTime() {
+        	var time = new Date();
+        	var h =time.getHours();
+        	h = h < 10 ? '0'+ h : h;
+        	var m =time.getMinutes();
+        	m = m < 10 ? '0'+ m : m;
+        	var s =time.getSeconds();
+        	s = s < 10 ? '0'+ s : s;
+        	return h + ':' + m + ':' + s;
+        }
+        console.log(getTime());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

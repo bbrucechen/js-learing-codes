@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<a href="http://www.baidu.com"></a>
+	<input type="checkbox" name="" checked>
+	<div index="1" data-index="2" data-name="uuu">
+		11
+	</div>
+	<span>s123</span>
+	<script type="text/javascript">
+		$(function(){
+			//element.prop（“属性名”） 获取属性值
+			console.log($("a").prop("href"));
+
+			// element.prop("属性名"，"属性值"); 修改属性名
+			$("a").prop("title","shabi");
+
+			$("input").change(function() {
+				console.log($(this).prop("checked"));
+			})
+
+			// attr('attribute', 'value'); 获取修改自定义属性
+			// 自定义属性不可用prop
+			console.log($("div").prop("index"));
+			console.log($("div").attr("index"));
+			$("div").attr("index",3);
+			console.log($("div").attr("index"));
+			console.log($("div").attr("data-index"));
+
+			// data('name', 'value') 数据缓存 不会更改元素结构 只是保存而已
+			$("span").data("uname","andy");
+			console.log($("span").data("uname"));
+			// 同时还可以获取元素用data-xx定义的自定义属性 直接写后面名字即可 不用加data
+			console.log($("div").data("name"));
+
+		})
+	</script>
+</body>
+</html>

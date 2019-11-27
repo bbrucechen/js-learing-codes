@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+
+let p = new Promise((resolve,reject) => {
+	// resolve('黑暗骑士');
+})
+
+
+async function getA() {
+	// await 后面接上一个promise实例
+	// 作用是同步执行实例里的回调函数res 并返回执行时的参数
+	let name = await p;
+	console.log(name);
+}
+
+getA().then((res) => {
+	console.log(res);
+}).catch((e) => {
+	console.log(e)
+})
+</script>

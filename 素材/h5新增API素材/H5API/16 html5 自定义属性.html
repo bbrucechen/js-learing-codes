@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div data-name="小红" data-first-name="andy" data-age="18" data-id-num-no="10"> 小红 </div>
+<script>
+	
+//  HTML5 自定义属性
+// 	1. 自定义属性
+//     命名规范：
+//    (1). data-开头  
+//    (2). data-后面至少包含一个字符 
+
+
+// 2.  获取定义的属性值  通过 dataset  数据集
+// 
+var div = document.querySelector("div");
+console.log(div.dataset); // 得到的是自定义属性的对象
+console.log(div.dataset.age);  // dataset 里面的 age    data-age
+console.log(div.dataset.firstName);  // data-first-name   这样调用  firstName  骆驼命名法 
+console.log(div.dataset.idNumNo);  
+
+// 3.  设置定义的属性值  通过 dataset 
+ 
+ div.dataset.age = 28; 
+ div.dataset["age"] = 48; 
+
+ console.log(div.dataset.age); 
+
+// 4.  删除定义的属性值  
+// 
+// div.dataset.firstName = null;
+div.dataset["firstName"] = null;
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+			id:1,
+			name:'andy',
+			msg:{
+				age:18
+			},
+			color:['pink','red']
+		}
+		var o = {};
+		function deepcopy(newobj,oldobj) {
+			for(var k in oldobj) {
+				var item = oldobj[k];
+				//判断是否是数组
+				if(item instanceof Array) {
+					newobj[k] = [];
+					deepcopy(newobj[k],item);
+				} else if (item instanceof Object) {
+					newobj[k] = {};
+					deepcopy(newobj[k],item);
+				} else {
+					newobj[k] = item;
+				}
+
+			}
+		}
+		deepcopy(o,obj);
+		console.log(o);
+		o.msg.age = 20;
+		console.log(obj.msg.age);
+	</script>
+</body>
+</html>

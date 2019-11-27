@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		li {
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li></li>
+	</ul>
+	<script type="text/javascript">
+		var timer = new Date();
+		var second = timer.getSeconds();
+		var li = document.querySelector('li');
+		li.innerHTML = second;
+		 function countdown() {
+		 	 setTimeout(function() {
+		 	 	if (li.innerHTML < 59) {
+		 	 		li.innerHTML++;
+		 	 	} else {
+		 	 		li.innerHTML = 0;
+		 	 	}	
+			countdown();
+		},1000)
+		}
+		
+		countdown();
+		
+		
+		
+		
+	</script>
+</body>
+</html>

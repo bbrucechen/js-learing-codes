@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="one"></div>
+	<script type="text/javascript">
+		// jQuery中的class操作不会影响原有class名，相当于追加类名
+		$(function(){
+			$(".one").addClass('two');
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var userID=prompt('请输入用户名'),userCode=prompt('请输入密码');
+		// while(userID!='admin'||userCode!='123456') {
+		// 	alert('密码或用户名错误，请重新输入')
+		// 	userID=prompt('请输入用户名');
+		// 	userCode=prompt('请输入密码');
+		// }
+		// alert('登陆成功！');
+
+		// var sum=0;
+		// for(i=1;i<=100;i++) {
+		// 	if(i%10==3) {
+		// 		continue;
+		// 	}
+		// 	sum+=i;
+		// }
+		// alert(sum);
+
+		// var str='';
+		// for(var i=1;i<=9;i++)
+		// 	for(var j=1;j<=i;j++)
+		// 	{
+		// 		str += j+'*'+i+'='+j*i+'\t';
+		// 		if(j==i) {
+		// 			str += '\n';
+		// 		}
+		// 	}
+		// 	console.log(str);
+
+		// var star='';
+		// for(var i=1;i<=5;i++) {
+		// 	for(var j=1;j<=5;j++)
+		// 	{
+		// 		star += '★';
+		// 	}
+		// 	star += '\n';
+		// }
+		// console.log(star);
+
+		// var star='';
+		// for(var i=1;i<=5;i++) {
+		// 	for(var j=1;j<=i;j++)
+		// 	{
+		// 		star += '★';
+		// 	}
+		// 	star += '\n';
+		// }
+		// console.log(star);
+
+		// var sum=0,
+		// 	i=1;
+		// while(i<=100) {
+		// 	sum += i;
+		// 	i++
+		// }
+		// alert(sum + '\n' + sum/100);
+
+		// var sum=0,
+		// 	i=1;
+		// while(i<=100) {
+		// 	if(i%2==0) {
+		// 	sum += i;
+		// 	}
+		// 	i++;
+		// }
+		// alert(sum);
+
+		// var sum=0,
+		// 	i=1;
+		// while(i<=100) {
+		// 	if(i%7==0) {
+		// 	sum += i;
+		// 	}
+		// 	i++;
+		// }
+		// alert(sum);
+
+			var currentMoney=100;
+			while(option!='4') {
+				var option=prompt('请输入您要的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+			switch(option){
+			case '1': 
+			var save=parseInt(prompt('请输入存钱数:'));
+			currentMoney += save;
+			alert('您存入：'+save+'元');
+			break;
+			case '2': 
+			var take=parseInt(prompt('请输入取钱数:'));
+			currentMoney -= take;
+			alert('您取出：'+take+'元');
+			break;
+			case '3': 
+			alert('您当前的存款总额是：'+currentMoney+'元');
+			break;
+			case '4': 
+			alert('您正在退出...');
+			break;
+			}
+			}
+			
+		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

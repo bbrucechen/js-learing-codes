@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+			id : 1,
+			pname : 'xiaomi',
+			price : 1999,
+			num: 10
+		}
+       	// 遍历对象的属性 返回数组
+		var arr = Object.keys(obj);
+		// console.log(arr);
+		arr.forEach(function(value) {
+			console.log(value);
+		})
+		//返回的是字符串
+		// for(var k in obj) {
+		// 	console.log(k);
+		// 	console.log(typeof k);
+		// }
+	</script>
+</body>
+</html>

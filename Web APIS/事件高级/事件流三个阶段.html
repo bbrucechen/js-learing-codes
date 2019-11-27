@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		.father {
+			width: 300px;
+			height: 500px;
+			background-color: pink;
+			margin: 300px auto;
+			padding: 1px;
+		}
+		.son {
+			width: 200px;
+			height: 300px;
+			background-color: purple;
+			margin: 100px auto;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son">盒子</div>
+	</div>
+	<script type="text/javascript">
+		// js代码只能执行捕获或者冒泡其中一个阶段
+		//onclick 和attachEvent只能得到冒泡阶段
+		// 如果addEvenetListener 第三个参数是true 那么则处于捕获阶段 document > html > body > father > son 
+		// var son = document.querySelector('.son');
+		// son.addEventListener('click',function() {
+		// 	alert('son');
+		// },true)
+		// var father = document.querySelector('.father');
+		// father.addEventListener('click',function() {
+		// 	alert('father');
+		// },true)
+		// 因为是捕获阶段 所以先弹出 father 再弹出son
+		//冒泡阶段 如果第三个参数是false 是冒泡阶段
+			var son = document.querySelector('.son');
+		son.addEventListener('click',function(e) {
+			alert('son');
+			e.stopPropagation();
+			e.cancelBubble = true; //ie678兼容写法
+		},false)
+		var father = document.querySelector('.father');
+		father.addEventListener('click',function(e) {
+			alert('father');
+			e.stopPropagation();
+		},false)
+		document.addEventListener('click',function(){
+			alert('document');
+		} )
+		// son.onclick = function() {
+		// 	alert('son');
+		// }
+		// father.onclick = function() {
+		// 	alert('father');
+		// }
+	</script>
+</body>
+</html>

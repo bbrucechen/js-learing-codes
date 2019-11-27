@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Star(uname,age) {
+			this.uname = uname;
+			this.age = age;
+		}
+		Star.prototype.sex = 'woman';
+		// Object.prototype.sex = 'nomannowoman';
+		var ldh = new Star('刘德华',18);
+		// Star.sex = 'man';
+		// ldh.sex = 'man';
+		console.log(Star.sex);
+	</script>
+</body>
+</html>

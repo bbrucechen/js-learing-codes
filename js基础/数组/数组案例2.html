@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var num=[2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+		// var numNew=[];
+		// for(var i = k = 0; i < num.length; i ++) {
+		// 	if(num[i] != 0) {
+		// 		numNew[k++] = num[i];
+		// 	}
+		// }
+		// console.log(numNew);
+
+		var color=['red','green','blue','pink','purple'],Color;
+		for(var i = 0;i < color.length/2; i ++) {
+			Color = color[i];
+			color[i] = color[color.length-1-i];
+			color[color.length-1-i] = Color;
+		}
+		console.log(color);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

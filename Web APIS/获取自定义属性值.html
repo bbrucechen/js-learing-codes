@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="demo" index='1'></div>
+	<script type="text/javascript">
+		var div = document.querySelector('div');
+		console.log(div.getAttribute('class'));
+		// getAttribute 一般用于获取自定义的属性
+		console.log(div.getAttribute('index'));
+		//设置属性值
+		//1. elemment.属性 ='属性值'
+		div.className = 'demos';
+		//2.element.setAttribute('属性'，'值')；
+		div.setAttribute('index','2');
+		div.setAttribute('class','footer');  // class 特殊 写的是class 不是className
+		//移除属性 element.removeAttribute('属性');
+		div.removeAttribute('index');
+
+	</script>
+</body>
+</html>

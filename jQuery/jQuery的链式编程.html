@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+	<button>5</button>
+	<button>6</button>
+	<button>7</button>
+	<script>
+		$("button").click(function(){
+			// 即可以对同个操作对象实现多个操作 
+			$(this).css("color","red").siblings('button').css("color","");
+		})
+	</script>	
+</body>
+</html>

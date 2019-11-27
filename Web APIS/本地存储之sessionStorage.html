@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name="">
+	<button class="set">存储数据</button>
+	<button class="get">获取数据</button>
+	<button class="remove">删除数据</button>
+	<button class="del">清空所有数据</button>
+	<script type="text/javascript">
+		console.log(localStorage.getItem('pwd'));
+		var ipt = document.querySelector('input');
+		var set = document.querySelector('.set');
+		var get = document.querySelector('.get');
+		var remove = document.querySelector('.remove');
+		var del = document.querySelector('.del');
+		// 添加某个数据
+		set.addEventListener('click',function() {
+			var val = ipt.value;
+			sessionStorage.setItem('unmame',val);
+			sessionStorage.setItem('pwd',val);
+		})
+		//获得某个数据
+		get.addEventListener('click',function() {		
+			console.log(sessionStorage.getItem('unmame'));
+		})
+		//删除指定数据
+		remove.addEventListener('click',function() {
+			sessionStorage.removeItem('unmame');
+		})
+		//删除所有数据
+		del.addEventListener('click',function() {
+			sessionStorage.clear();
+		})
+	</script>
+</body>
+</html>

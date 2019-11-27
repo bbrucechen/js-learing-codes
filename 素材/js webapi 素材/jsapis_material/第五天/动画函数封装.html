@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			background-color: pink;
+		}
+		span {
+			top: 200px;
+			display: block;
+			width: 150px;
+			height: 150px;
+			background-color: purple;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<button type="" class="btn500">500</button>
+	<button type="" class="btn800">800</button>
+	<div></div>
+	<span></span>
+	<script>
+		var div = document.querySelector('div');
+		var movedis = 5;
+		var span = document.querySelector('span');
+		var btn500 = document.querySelector('.btn500');
+		var btn800 = document.querySelector('.btn800');
+		function animate(obj,target,callback) {
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+			var step = ((target-obj.offsetLeft)/10)>0? Math.ceil((target-obj.offsetLeft)/10):Math.floor((target-obj.offsetLeft)/10);
+				if(obj.offsetLeft == target) {
+				clearInterval(obj.timer);
+				if(callback) {
+					callback();
+				}
+			}
+			//匀速动画
+			// obj.style.left = obj.offsetLeft + 1 + 'px';
+			//缓动动画
+			obj.style.left = obj.offsetLeft + step + 'px';
+		},30)};	
+		animate(div,300);
+		// animate(span,200);
+		btn500.addEventListener('click',function() {
+			animate(span,500,function() {
+				alert('shabi');
+			});
+		})
+		// 不断的点击按钮 元素的速度会越来越快 因为开启了太多的定时器
+		//解决方案 先清除之前的定时器 让元素只有一个定时器执行
+		btn800.addEventListener('click',function() {
+			animate(span,800,function() {
+				span.style.backgroundColor = 'blue';
+			});
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		.bg {
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="one two "></div>
+	<button type=""></button>
+	<script type="text/javascript">
+		var div =document.querySelector('div');
+		console.log(div.classList[0]);
+		//添加类名 是在后面追加类名 不会覆盖 
+		div.classList.add('three');
+		console.log(div.classList);
+		div.classList.remove('one');
+		console.log(div.classList);
+		var button = document.querySelector('button')
+		button.onclick = function() {
+			document.body.classList.toggle('bg');
+		}
+	</script>
+</body>
+</html>

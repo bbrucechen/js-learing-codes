@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// class Father {
+		// 	constructor() {
+
+		// 	}
+		// 	money() {
+		// 		console.log(100);
+		// 	}
+		// }
+		// class Son extends Father {
+
+		// }
+		// var son = new Son();
+		// son.money();
+
+		class Father {
+			constructor(x,y) {
+				this.x = x;
+				this.y = y;
+			}
+			sum() {
+				console.log(this.x + this.y);
+			}
+		}
+
+		class Son extends Father {
+			constructor(z,v) {
+				super(z,v);
+				this.z = z; //this指向的是Son
+			}
+		}
+		var son = new Son(1,2);
+		son.sum();
+	</script>
+</body>
+</html>

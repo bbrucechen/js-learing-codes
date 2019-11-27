@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const a  = new Set();
+		console.log(a.size);
+		const b = new Set([1,2,3,4,3,1,2,4,'a','a']);
+		console.log(b);
+		console.log(b.size);
+
+
+		// 利用Set数据结构去重
+		const s3 = new Set([1,2,3,2,1]);
+		console.log(...s3);
+
+		// Set数据结构方法
+		// add(value) 添加某个值 返回Set解构本身
+		// delete(value) 删除某个值 返回布尔值显示删除是否成功
+		// has() 判断是否存在某个值 返回布尔值
+		// clear() 删除全部数据 
+
+		const s1 = new Set();
+		s1.add('pink').add('red');
+		console.log(s1);
+
+		const r1 = s1.delete('red');
+		console.log(s1);
+		console.log(r1);
+
+		const r2 = s1.has('pink');
+		console.log(r2);
+
+		s1.clear();
+		console.log(s1);
+
+		// 遍历Set数据结构
+		const s2 = new Set([1,2,3,4]);
+		s2.forEach(value => console.log(value));
+	</script>
+</body>
+</html>

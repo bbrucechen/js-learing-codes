@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		/*世纪佳缘*/
+		/*input {
+			border:1px solid #ccc;
+			outline: none;
+			color: #ccc;
+		}*/
+
+		/*京东广告*/
+		/*div {
+			width: 100%;
+			height: 200px;
+			position: relative;
+		}
+		div img {
+			height: 100%;
+			width: 100%;
+		}
+		div div {
+			width: 30px;
+			height: 30px;
+			background-color: rgba(0, 0, 0, .5);
+			position: absolute;
+			top: 10px;
+			right: 60px;
+			font-size: 25px;
+			text-align: center;
+			line-height: 30px;
+			cursor: pointer;
+		}*/
+
+		/*新浪下拉菜单*/
+		/*.menu {
+			width: 80px;
+			height: 50px;
+			background-color: #ccc;
+			text-align: center;
+			line-height: 50px;
+		}
+		.menu-b {
+			display: none;
+		}
+		.menu-b div {
+			width: 80px;
+			height: 50px;
+			background-color: #999;
+			text-align: center;
+			line-height: 50px;
+			border-bottom: 1px solid #ccc;
+		}*/
+	</style>
+</head>
+<body>
+	<!-- 世纪佳缘 -->
+	<!-- <input type="text" name="" value="用户名">
+	<input type="text" name="" value='密码'> -->
+	<!-- <script type="text/javascript">
+		var ipt = document.querySelectorAll('input');
+		ipt[0].onfocus =function() {
+			this.value = '';
+			this.style.borderColor = 'pink';
+		}
+		ipt[0].onblur =function() {
+			this.style.borderColor = '#ccc';
+			this.value = '用户名';
+		}
+		ipt[1].onfocus =function() {
+			this.type = 'password';
+			this.value = '';
+			this.style.borderColor = 'pink';
+		}
+		ipt[1].onblur =function() {
+			this.style.borderColor = '#ccc';
+			this.type = 'text';
+			this.value = '密码';
+		}
+	</script> -->
+
+	<!-- 京东广告关闭 -->
+	<!-- <div>
+		<img src="1291fadcd100baa1706c1da04d10b912c9fc2e91.jpg">
+		<div id="close">×</div>
+	</div>
+	<script type="text/javascript">
+		var button = document.querySelector('#close');
+		var bc = document.querySelector('div');
+		button.onclick = function() {
+			bc.style.display = 'none';
+		}
+	</script> -->
+	
+	<!-- 新浪下拉菜单 -->
+	<!-- <div class="menu">
+		微博&nbsp;∨
+	</div>
+	<div class="menu-b">
+		<div>私信</div>
+		<div>评论</div>
+		<div>@我</div>
+	</div>
+	<script type="text/javascript">
+		var menu = document.querySelector('.menu');
+		var menub = document.querySelector('.menu-b');
+		menu.onmousemove = function(){
+			menub.style.display = 'block';
+		}
+		menu.onmouseout = function(){
+			menub.style.display = 'none';
+		}
+	</script> -->
+
+	<!-- 开光灯 -->
+	<input type="button" name="" value="开光灯">
+	<script type="text/javascript">
+		var switchbutton = document.querySelector('input');
+		var body  = document.body;
+		var flag = false;
+		switchbutton.onclick = function() {
+			if (flag == false) {
+			body.style.backgroundColor = 'black';
+			flag = true;
+		} else {
+			body.style.backgroundColor = '#fff';
+			flag = false;
+		}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var obj = new Object();
+		obj.uname = '张三疯';
+		obj.age  = 18;
+		obj.sex = '男';
+		obj.sayHi = function() {
+			console.log('Hi');
+		}
+		// 我们是利用等号赋值的方法，添加对象的属性和方法
+		// 每个属性和方法之间用分号结束
+		console.log(obj.uname);
+		console.log(obj.sex);
+		obj.sayHi();
+
+		var mingren = new Object();
+		mingren.name = '鸣人';
+		mingren.sex = '男';
+		mingren.age = 19;
+		mingren.skill =function() {
+			console.log('影分身之术！');
+		}
+		console.log(mingren.name+mingren.sex+mingren.age);
+		mingren.skill();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

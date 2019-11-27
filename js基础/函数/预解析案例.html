@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//案例1
+		// var num = 10;
+		// fun();
+		// function fun() {
+		// 	console.log(num);
+		// 	var num = 20;
+		// }                  
+		//等价于
+		// var num;
+		// function fun() {
+		// 	// var num;
+		// 	console.log(num);
+		// 	num = 20;
+		// }
+		// num = 10;
+		// fun();         结果为undefined
+
+		//案例2
+		// var num=10;
+		// function fn() {
+		// 	console.log(num);
+		// 	var num = 20;
+		// 	console.log(num);
+		// }
+		// fn();
+
+		// 案例3
+		// var a = 18;
+		// f1();
+		// function f1() {
+		// 	var b =9;
+		// 	console.log(a);
+		// 	console.log(b);
+		// 	var a = '123';
+		// }                   结果为undefined 20
+
+		// 案例4
+		fl();
+		console.log(c);
+		console.log(b);
+		console.log(a);
+		function fl() {
+			var a =b = c = 9;
+			console.log(a);
+			console.log(b);
+			console.log(c);
+
+		}
+		// 等价于
+		function fl() {
+			var a;
+			a=9;
+			// b和c变为全局变量
+			b=9;         
+			c=9;
+			console.log(a);
+			console.log(b);
+			console.log(c);
+		}
+		fl();
+		console.log(c);
+		console.log(b);
+		console.log(a);              //结果为9 9 9  9 9 报错
+ 	</script>
+</head>
+<body>
+	
+</body>
+</html>

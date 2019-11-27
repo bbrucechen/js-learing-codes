@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.4.1.js"></script>
+	<style type="text/css" media="screen">
+		li {
+			list-style: none;
+		}
+		.fatheropi>li ul {
+			margin: 0;
+			padding: 0;
+			display: none;
+		}
+		.fatheropi>li {
+			float: left;
+		}
+		.fatheropi>li li {
+			border: 1px solid orange;
+			padding: 10px;
+			cursor: pointer;
+		}
+		a {
+			display: block;
+			padding: 10px;
+			text-decoration: none;
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<ul class="fatheropi">
+		<li>
+			<a href="#">微博</a>
+			<ul>
+				<li>私信</li>
+				<li>评论</li>
+				<li>@我</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">微博</a>
+			<ul>
+				<li>私信</li>
+				<li>评论</li>
+				<li>@我</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">微博</a>
+			<ul>
+				<li>私信</li>
+				<li>评论</li>
+				<li>@我</li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		// 事件切换 hover(function() {
+		// 	/* Stuff to do when the mouse enters the element */
+		// }, function() {
+		// 	/* Stuff to do when the mouse leaves the element */
+		// });
+		$(function(){
+			// $(".fatheropi>li").hover(function() {
+			// 	$(this).children("ul").slideDown(300);
+			// }, function() {
+			// 	$(this).children("ul").slideUp(300);
+			// });
+		// 2.事件切换 如果只写一个函数，那么鼠标离开和经过都会触发这个函数
+			$(".fatheropi>li").hover(function(){
+				// 动画一旦触发就会执行 如果不断触发就会造成排队执行 
+				// 利用stop()可以停止动画的执行 在动画效果中用stop（）相当于停止上一次还在运行中的动画 利用这个函数可以防止动画排队执行
+				// 注意 stop一定写在动画之前
+				$(this).children("ul").stop().slideToggle(300);
+			})
+
+		})
+	
+		
+
+	</script>
+</body>
+</html>

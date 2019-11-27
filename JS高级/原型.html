@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Star(uname,age) {
+	this.uname = uname;
+	this.age = age;
+	// this.sing= function() {
+		// console.log('我会唱歌');
+	// }
+}	
+	console.dir(Star);
+	Star.prototype.sing = function() {
+		console.log('我会唱歌');
+	}
+	var ldh = new Star('刘德华',18);
+	var zxy = new Star('张学友',19);
+	ldh.sing();
+	zxy.sing();
+	console.dir(ldh);
+	ldh.__proto__.sing();
+	</script>
+</body>
+</html>

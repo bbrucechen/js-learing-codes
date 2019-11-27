@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type="">点击</button>
+	<script type="text/javascript">
+		var that;
+		class Star {
+			constructor(uname,age) {
+				that = this;
+				//constructor里面的this指向创建的实例对象
+				this.uname = uname;
+				this.age =age;
+				// this.sing();
+				this.btn = document.querySelector('button');
+				this.btn.onclick = this.sing;
+			}
+			sing() {
+				//this指向btn
+				console.log(this);
+				//btn中没有uname 所以为undefined
+				console.log(that.uname);
+			}
+
+			dance() {
+				//指向实例
+				console.log(this.uname);
+			}
+		}
+		var ldh = new Star('ldh',29);
+		// 在ES6中类没有变量提升，所以必须先定义类，才能通过类实例化对象
+		// 类里面的属性和方法一定要加this使用和调用
+	</script>
+</body>
+</html>

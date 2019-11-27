@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type="" id="super1" >super</button>
+	<button type="" id="bat">bat</button>
+	<img src="1291fadcd100baa1706c1da04d10b912c9fc2e91.jpg" title="superman">
+
+	<script type="text/javascript">
+		// 1.获取元素
+		var super1 = document.querySelector('#super1');
+		var bat = document.querySelector('#bat');
+		var img = document.querySelector('img');
+		// 注册事件
+		bat.onclick = function() {
+			img.src = '549fca95d143ad4b35a803db88025aafa50f0657.jpg';
+			img.title = 'batman';
+		}
+		super1.onclick = function() {
+			img.src = '1291fadcd100baa1706c1da04d10b912c9fc2e91.jpg';
+			img.title = 'superman';
+
+		}
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		ul {
+			margin:  0 auto;
+		}
+		ul li {
+			width: 75px;
+			height: 75px;
+			background-color: pink;
+			float: left;
+			list-style: none;
+			margin:0 20px 20px 0;
+			background: url(letter.jpg);
+			background-position: 0 0;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+	</ul>
+	<script type="text/javascript">
+		var lis = document.querySelectorAll('li');
+		var xx = 0;
+		for(var i =0;i < lis.length;i ++) {
+			var index = i * -75;
+			lis[i].style.backgroundPosition =index+'px'+' 0';
+		}
+	</script>	
+</body>
+</html>

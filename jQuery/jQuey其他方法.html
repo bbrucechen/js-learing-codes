@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		// $.extend([deep],拷贝给谁，拷贝谁1，拷贝谁2,...)  deep属性可以选填 默认为浅拷贝 如果为true 则是深拷贝
+		// var targetobj = {};
+		// var obj = {
+		// 	id:1,
+		// 	name:"andy"
+		// }
+		// $.extend(targetobj,obj);
+		// console.log(targetobj);
+		// 如果拷贝对象先有相同属性，则被覆盖
+// 		var targetobj = {
+// 			id:0
+// 		}
+// 		var obj = {
+// 	id:1,
+// 	name:"andy"
+// }
+// $.extend(targetobj,obj);
+// console.log(targetobj);
+		// 默认为浅拷贝
+		// var targetobj = {};
+		// var obj = {
+		// 	id:1,
+		// 	name:"andy",
+		// 	msg:{
+		// 		age:19
+		// 	}
+		// }
+		// $.extend(targetobj,obj);
+		// targetobj.msg.age = 20;
+		// targetobj.id = 2;
+		// console.log(obj);
+
+		// 深拷贝方法
+		var targetobj = {};
+		var obj = {
+			id:1,
+			name:"andy",
+			msg:{
+				age:18
+			}
+		}
+		$.extend(true,targetobj,obj);
+		targetobj.msg.age = 20;
+		targetobj.id = 2;
+		console.log(obj);
+		console.log(targetobj);
+	</script>
+</body>
+</html>

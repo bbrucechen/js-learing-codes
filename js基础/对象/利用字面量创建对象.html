@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var obj = {}; //创建了一个空的对象
+		var obj = {
+			uname: '张三疯',
+			age: 18,
+			sex: '男',
+			sayHi: function() {
+				console.log('Hi');
+			}
+		}
+		// (1) 里面的属性或者方法我们采取键值对的形式 键 属性名 ： 值 属性值
+		// (2) 多个属性或者方法中间用逗号隔开
+		// (3) 方法冒号后面跟的是一个匿名函数
+		 //2.适用对象
+		 // (1) 调用对象的属性 我们能采取 对象名.属性名
+		 console.log(obj.uname);
+		 // (2) 第二种方法 对象名['属性名']
+		 console.log(obj['age']);
+		 // (3) 调用对象方法 sayHi 对象名.方法名 千万别忘记添加小括号
+		 obj.sayHi();
+
+		 var keke = {
+		 	dogname: '可可',
+		 	dogtype: '阿拉斯加犬',
+		 	dogage: '5岁',
+		 	dogcolor: '棕红色',
+		 	skill: 'bark and showfilm'
+		 }
+		 console.log(keke.skill);
+		 console.log(keke['dogtype']);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

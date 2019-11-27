@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 1.keyup
+		// document.onkeyup = function() {
+		// 	console.log('1');
+		// }
+		// document.addEventListener('keyup',function() {
+		// 	console.log('2');
+		// })
+		// keydown
+		// document.addEventListener('keydown',function() {
+		// 	console.log('3');
+		// })
+		// keypress 无法识别功能键ctrl shift 等
+		document.addEventListener('keypress',function() {
+			console.log('4');
+		})
+		//三个事件执行顺序 keydown - keypress - keyup
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function  arg(a,b,c){
+		// 	console.log(arguments[0]);
+		// }
+		// arg(1,2,3);
+
+		// 箭头函数中使用不了arguments，只能用剩余参数
+		const sum = (...s2) => {
+			var sum = 0;
+			s2.forEach(function(value) {
+				sum += value;
+			})
+			return sum;
+		}
+		sum(10,20);
+		console.log(sum(10,20,30));
+	</script>	
+</body>
+</html>

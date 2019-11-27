@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 200px;	
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script type="text/javascript">
+		var div = document.querySelector('div');
+		div.onclick = function() {
+			// div.style 里面的样式用驼峰命名法
+			this.style.backgroundColor = 'purple';
+			this.style.width = '400px';
+			// 修改后的样式为行内样式 权重比较高
+		}
+	</script>
+</body>
+</html>

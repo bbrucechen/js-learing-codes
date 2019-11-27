@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		
+	</style>
+</head>
+<body>
+	<div>123</div>
+	<ul>
+		<li>a</li>
+		<li>a</li>
+		<li>a</li>
+	</ul>
+	<script type="text/javascript">
+
+		var div = document.querySelector('div');
+		div.addEventListener('click',function(e){
+			console.log(e.target);
+			console.log(this);
+		})
+		var ul = document.querySelector('ul');
+		ul.addEventListener('click',function(e) {
+			// 点击li触发 返回的是li
+				console.log(e.target);
+				//绑定事件的是ul 返回的是ul
+			console.log(this);
+		})
+
+		div.onclick = function() {
+			e =e || window.event;
+			var target = e.target || e,srcElement;
+			console.log(e);
+		}
+		// 有个和this相似的属性 currentTarget 了解即可
+	</script>
+</body>
+</html>

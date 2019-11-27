@@ -1,0 +1,141 @@
+#bg {
+	width: 1000px;
+	height: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: all 1s;
+	/*background-color: pink;*/
+}
+.rotate {
+	transform: translate(-50%,-50%) rotateZ(-60deg)!important;
+
+}
+.row1 .orb1,.row1 .orb2 {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-color: purple;
+	top: 50%;
+	left: 50%;
+	margin-top: -280px;
+	margin-left: -30px;
+}
+.row1 .orb2 {
+	margin-top: -280px;
+	margin-left: 500px;
+}
+#bg div{
+	background: -webkit-linear-gradient(top,#fff,#dedede);
+	border-radius: 50%;
+}
+.row2 .orb1,.row2 .orb2,.row2 .orb3 {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-color: purple;
+	top: 50%;
+	left: 50%;
+	margin-top: -280px;
+	margin-left: -500px;
+}
+.row2 .orb2 {
+	margin-top: -180px;
+	margin-left: 500px;
+}
+.row2 .orb3 {
+	margin-top: 50px;
+	margin-left: 0px;
+}
+.row3 .orb1,.row3 .orb2 {
+	position: absolute;
+	width:500px;
+	height: 500px;
+	background-color: purple;
+	top: 50%;
+	left: 50%;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+.row1 div {
+	animation: orbmove 40s linear infinite;
+}
+
+.row2 div {
+	animation: orbmove 60s linear infinite;
+}
+.row3 div {
+	animation: orbmove 80s linear infinite;
+}
+@keyframes orbmove {
+	from {
+		transform: translateX(0) rotate(0deg);
+	}
+	to {
+		transform: translateX(-2000px) rotate(3600deg);
+	}
+}
+/*第一屏幕*/
+.section1 {
+	perspective: 1000px;
+}
+/*结束状态*/
+.coming .p1 {
+	transform: translate(-50%,-50%) rotateY(0deg);
+}
+/*开始状态*/
+.p1 {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%)  translateZ(500px) rotateY(-180deg);
+	background-color: pink;
+	width: 880px;
+	height: 320px;
+	background: url(../images/skin.gif);
+	transition: all 1s;
+}
+/*第二屏幕*/
+.p2 {
+	width: 316px;
+	height: 360px;
+	text-align: center;
+	/*background-color: pink;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%) translateZ(-6000px);
+	transition: all 1s;
+}
+.section2 {
+	perspective: 1000px;
+}
+/*第三屏幕*/
+.section3 {
+	perspective: 1000px;
+}
+.p3 {
+	position: absolute;
+	width: 1440px;
+	height: 760px;
+	top: 50%;
+	left: 50%;
+	margin-left: -270px;
+	margin-top: -284px;
+	background-color: pink;
+	border: 1px solid #ccc;
+	/*transform: translateZ(30px) rotateX(30deg);*/
+	transform: translateZ(1200px) rotateX(120deg);
+	transition: all 1s;
+
+}
+.title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -412px;
+	margin-top: -10px;
+	transform: translateZ(1200px) rotateY(-60deg);
+	transition: all 2s;
+}

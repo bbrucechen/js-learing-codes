@@ -1,0 +1,28 @@
+CACHE MANIFEST
+# 上面必须是第一行 
+CACHE:
+
+#此部分写需要缓存的资源 （#是注释的意思）
+
+./images/img1.jpg
+./images/img2.jpg
+./images/img3.jpg
+./images/img4.jpg
+
+
+NETWORK:
+
+#此部分要写需要有网络才可访问的资源，无网络刚不访问
+
+./images/img1.jpg
+./images/img2.jpg
+
+#*
+
+FALLBACK:
+
+#当访问不到某个资源的情况下，自动由另一个资源替换
+
+./images/img4.jpg  ./images/img5.jpg
+
+

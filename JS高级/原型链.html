@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Star(uname,age) {
+			this.uname = uname;
+			this.age = age;
+		}
+		Star.prototype.sing = function() {
+			console.log('我会唱歌');
+		}
+		var ldh = new Star('刘德华',18);
+		console.log(ldh.__proto__);
+		console.log(Star.prototype.__proto__);
+		console.log(Star.prototype.__proto__ === Object.prototype);
+		console.log(Object.prototype.__proto__); 
+	</script>
+</body>
+</html>

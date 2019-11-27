@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 如果函数体只有一句代码，且代码的执行结果就是函数的返回值，函数体大括号可以省略
+	// 	var fn = (a,b) => a + b;
+	// console.log(fn(1,2));
+
+		// 箭头函数中，如果形参只有一个，形参外侧的小括号可以省略
+		// var fun  = v => v;
+		// console.log(fun(1));
+
+		// 箭头函数不绑定this关键字，箭头函数中的this，指向的是函数定义位置的上下文this
+		const obj = {name: 11};
+		function fn () {
+			console.log(this);
+			return () => {
+				console.log(this);
+			} 
+		}
+		var fun = fn.call(obj);
+		fun();
+	</script>
+	
+</body>
+</html>

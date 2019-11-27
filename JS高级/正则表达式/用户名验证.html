@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name=""><span>请输入用户名</span>
+	<script type="text/javascript">
+		var reg = /^[a-zA-Z0-9_-]{6,16}$/;
+		console.log(reg.test('a'));
+		console.log(reg.test('8'));
+		console.log(reg.test('18'));
+		console.log(reg.test('aa'));
+		console.log(reg.test('............'));
+		console.log(reg.test('snooker5202011'));
+		console.log(reg.test('snooker!5202011'));
+
+		var input = document.querySelector('input');
+		var span = document.querySelector('span');
+		input.onblur = function(){
+			if(reg.test(input.value)) {
+				span.innerHTML = '用户名正确';
+				span.style.color = 'green';
+			} else {
+				span.innerHTML = '用户名错误';
+				span.style.color = 'red';				
+			}
+		}
+
+
+
+
+	</script>
+</body>
+</html>

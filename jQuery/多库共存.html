@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			// 1. 如果$符号冲突 则用jQuey
+			// 2.或者用定义一个变量，替换$  var xx = $.noConflict();
+			var  suibian = $.noConflict();
+			console.log(suibian("div"));
+		})
+	</script>
+</body>
+</html>

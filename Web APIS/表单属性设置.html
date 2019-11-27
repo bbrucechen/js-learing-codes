@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button type="" >按钮</button>
+	<input type="text" name="" value="输入内容">
+	<script type="text/javascript">
+		var btn = document.querySelector('button');
+		var input = document.querySelector('input');
+		btn.onclick = function() {
+			input.value = 'haha';
+			// 表单里面的值 是通过value修改的
+			//实现某个表单被禁用 用disable
+			this.disabled = true;
+		}
+		// this指向的是函数的调用者
+	</script>
+</body>
+</html>

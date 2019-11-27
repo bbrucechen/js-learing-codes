@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		img {
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<img src="1291fadcd100baa1706c1da04d10b912c9fc2e91.jpg">
+	<div>早上好</div>
+	<script type="text/javascript">
+		var img = document.querySelector('img');
+		var div = document.querySelector('div');
+		var date = new Date();
+		var hour = date.getHours();
+		if(hour >= 6 && hour < 12) {
+			img.src = '1291fadcd100baa1706c1da04d10b912c9fc2e91.jpg';
+			div.innerHTML = '早上好';
+			} else if(hour >= 12 && hour < 18) {
+			img.src = 'ab3b5bee3d6d55fba31ccf5b67224f4a21a4dd25.jpg';
+			div.innerHTML = '下午好';
+			} else  {
+			img.src = '549fca95d143ad4b35a803db88025aafa50f0657.jpg';
+			div.innerHTML = '晚上好';
+			}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var overtimems = +new Date('2019-8-12 18:00:00');
+		// var starttimems = +new Date();
+		// var lefttime = overtimems - starttimems;
+		//   // 剩余秒数 lefttimes/60000 
+		// var leftdays = Math.floor(lefttime / 3600000 /24);
+		// leftdays = leftdays<10? '0'+leftdays:leftdays;
+		// var lefthours = Math.floor(lefttime / 3600000 - leftdays * 24);
+		// lefthours = lefthours<10? '0'+lefthours:lefthours;
+		// var leftminutes = Math.floor((lefttime / 60000) % 60);
+		// leftminutes = leftminutes<10? '0'+leftminutes:leftminutes;
+		// var leftseconds =  Math.floor((lefttime / 1000) % 60);
+		// leftseconds = leftseconds<10? '0'+leftseconds:leftseconds;
+		// console.log('距离下午六点还有: '+ leftdays+'天'+lefthours+'时'+leftminutes+'分'+leftseconds+'秒');
+
+		var nowtime = +new Date();
+		var overtime = +new Date('2019-8-15 15:23:00');
+		var lefttimes = overtime - nowtime;
+		console.log(lefttimes);
+		var leftday = parseInt(lefttimes / 86400000);
+		var lefthour = parseInt(lefttimes / 1000 / 3600) - 24 * leftday;
+		var leftminute = parseInt((lefttimes / 60000) % 60);
+		var leftsecond = parseInt((lefttimes / 1000 ) % 60);
+		console.log(leftday);
+		console.log(lefthour);
+		console.log(leftminute);
+		console.log(leftsecond);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

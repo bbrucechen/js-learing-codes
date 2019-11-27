@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="file" name="" id="" multiple > 
+	<img src="" alt="" width="100">
+	<script>
+	// 我们想：  可以吧上传的文件，内容显示到页面？  或者 上传完毕图片显示缩略图到页面上。。。
+	// 1. 上传我们的文件  借助于 文件域  input file 
+	//
+	var file = document.querySelector("input");
+	var img = document.querySelector("img");
+	file.onchange = function() { //  onchange 当发生改变的时候   下拉菜单 select 也是这个事件
+		// console.log("选择了文件");
+		// console.log(file); 
+		// for( var k in file) {
+		// 	console.log( k + "~~~~" + file[k]);
+		// }
+		console.log(this.files);   // 上传文件的集合 可以是一个文件也可以是很多
+
+		// 2. 选择我们要的文件， 进行 读取  fileReader  文件里面的内容
+		// 初始化了一个 reader 对象 
+		var reader = new FileReader();  
+
+		 // reader.readAsText(文件对象);
+		 // 读取 this.files[0] 文件里面的内容
+		 reader.readAsDataURL(this.files[0]);  
+
+		  // 当这个文件的内容读取完毕之后 ，会把内容存放到  result里面
+		  
+		  // 3. 把读取的内容显示到 页面中..
+		  // reader 已经读取完毕 而且读取的内容 存放到了  result里面了 
+		  reader.onload = function() {
+
+		  		// console.log(this.result);
+		  		// 把生成的内容 赋值给 图片 src  
+		  		img.src = this.result;
+		  }
+           
+	}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Star(uname,age) {
+			this.uname = uname;
+			this.age = age;
+		}
+		// Star.prototype.sing = function() {
+		// 	console.log('我在唱歌');
+		// }
+		// Star.prototype.movie = function() {
+		// 	console.log('我会演电影');
+		// }
+		Star.prototype = {
+			//这种形式会覆盖之前的属性和行为 所以需要重新赋值constructor
+			constructor: Star,
+			sing : function() {console.log('11');},
+			movie : function() {console.log('222');}
+		}
+		var ldh = new Star('刘德华',18);
+		var zxy = new Star('张学友',20);
+		console.log(Star.prototype.constructor);
+		console.log(ldh.__proto__.constructor);
+		Star.prototype.sing();
+		Star.prototype.movie();
+
+	</script>
+</body>
+</html>

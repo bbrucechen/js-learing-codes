@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	var num3 = ['ha','xi','hei','he'];
+	var num4 = num3.splice(1,0,'en'); // 在第1位前面插入'en'
+	var num5 = num3.splice(1,1); //第1位开始删除一位 
+	console.log(num5); // 'xi'
+	console.log(num4);
+	var num6 = num3.splice(2,1,'en','o');
+	console.log(num3);// 'ha' 'xi' 'en' 'o' 'he'
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

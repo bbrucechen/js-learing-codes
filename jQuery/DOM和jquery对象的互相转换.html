@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<video src="02 课程内容.mp4" muted></video>
+	<script type="text/javascript">
+		// DOM转为jquery
+		// 1.直接用jquery获取对象，获得的就是jquery对象
+		// $('video');
+		// 2.如果已先用原生JS取得了DOM对象
+		// var mydiv = document.querySelector('video');
+		// mydiv.play();
+		// $(mydiv).play(); //错误 jquery中没有play方法
+		// jquery转为dom对象
+		// $('video')[0].play();
+		console.dir($("video"));
+		$('video').get(0).play();
+		console.dir($('video'));
+	</script>
+</body>
+</html>

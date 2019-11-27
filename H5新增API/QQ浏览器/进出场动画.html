@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		/*两个状态 结束和起始*/
+		div {
+			width: 1000px;
+			height: 500px;
+			margin: 100px auto;
+			position: relative;
+			perspective: 1000px;
+		}
+		.comin .p2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		} 
+		.p2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%) translateZ(1000px);
+			transition: all 2s;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/p2pop1.png" alt="" class="p2">
+	</div>
+	<button type="" >进场</button>
+	<button type="">退场</button>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("button:first").on("click",function(){
+				$("div").addClass('comin');
+			})
+			$("button").eq(1).on("click",function(){
+				$("div").removeClass('comin');
+
+			})
+		})
+	</script>
+</body>
+</html>

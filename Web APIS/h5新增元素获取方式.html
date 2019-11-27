@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box">盒子</div>
+	<div class="box">盒子</div>
+	<div id="nav">
+		<ul>
+			<!-- <li>11</li> -->
+			<!-- <li>22</li> -->
+		</ul>
+	</div>
+	<script type="text/javascript">
+		//1.getElementsByClassName   根据类名获得某些元素的集合 依旧返回伪数组
+		var boxs = document.getElementsByClassName('box');
+		console.log(boxs);
+		// docunment.querySelector('选择器') 返回指定选择器的第一个元素对象
+		var firstbox = document.querySelector('.box');
+		console.log(firstbox);
+		var nav = document.querySelector('#nav');
+		console.log(nav);
+		var one = document.querySelector('li');
+		console.log(one);
+		// querySelectorAll() 返回指定选择器的所有元素集合
+		var allbox  = document.querySelectorAll('.box');
+		console.log(allbox);
+		var lis = document.querySelectorAll('li');
+		console.log(lis);
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.4.1.js"></script>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+	<ol>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ol>
+	<script type="text/javascript">
+		$(function(){
+			// 选出第一个
+			$("ul li:first").css("color","red");
+			// 选最后一个
+			$("ul li:last").css("color","green");
+			// 选某索引值位2的一个
+			$("ul li:eq(2)").css("color","blue");
+			// 选取奇数个
+			$("ol li:odd").css("color","yellow");
+			// 选取偶数个
+			$("ol li:even").css("color","pink");
+
+		})
+	</script>
+</body>
+</html>

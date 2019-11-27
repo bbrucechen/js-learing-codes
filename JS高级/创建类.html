@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Star {
+			constructor(uname,age) {
+				this.uname = uname;
+				this.age = age;
+			}
+		}
+		var ldh = new Star('刘德华',20);
+		var zxy = new Star('张学友',30);
+		console.log(ldh);
+		console.log(zxy);
+
+		class Game {
+			constructor(gamename,type) {
+				this.name = gamename;
+				this.type = type;
+			}
+		}
+		var wizard = new Game('wizard','rpg');
+		var csgo = new Game('csgo','fps');
+		console.log(wizard);
+		console.log(csgo);
+
+		class Superhero {
+			constructor(heroname,superpower) {
+				this.heroname = heroname;
+				this.superpower = superpower;
+			}
+		}
+		var batman = new Superhero('batman','high IQ');
+		var superman = new Superhero('superman','superstrength');
+		console.log(batman);
+		console.log(superman);
+
+		class Medicine {
+			constructor(medicinename,effect) {
+				this.medicinename = medicinename;
+				this.effect = effect;
+			}
+		}
+		var stomachmed =  new Medicine('stomachmed','stomachillness');
+		var bonemed =  new Medicine('bonemed','boneillness');
+		console.log(stomachmed);
+		console.log(bonemed);
+		
+
+	</script>
+</body>
+</html>

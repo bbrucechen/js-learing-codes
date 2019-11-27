@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="file" name="" id="" multiple>
+	<img src="" alt="" width="100" height="100">
+	<script type="text/javascript">
+		//1.上传文件 借助于文件域 input file
+		var file = document.querySelector("input");
+		var img = document.querySelector("img");
+		file.onchange = function(){
+		//2.选择文件进行读取 利用FileReader对象 h5新增内置对象
+		var reader = new FileReader();
+		reader.readAsDataURL(this.files[0]);
+		//3.把读取的内容显示到页面中 当文件读取完毕之后，会把内容存放到result属性中
+		reader.onload = function(){
+			img.src = this.result;
+		}
+		}
+		
+		
+	</script>
+</body>
+</html>

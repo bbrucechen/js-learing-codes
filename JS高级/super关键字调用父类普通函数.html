@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Father {
+			say() {
+				return 'woshibaba';
+			}
+		}
+		class Son extends Father {
+			say() {
+				// 
+				console.log(super.say() + 'deerzi');
+			}
+		}
+		var son = new Son();
+		son.say(); // 就近原则调用
+		//继承中属性或者方法查找原则：就近原则
+
+		class Superman {
+			say() {
+				return 'i am superman';
+			}
+			
+		}
+		class Batman extends Superman {
+			say() {
+				console.log(super.say() + ' and batman');
+			}
+		}
+		var wf = new Batman();
+		wf.say();
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var num=[2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+		var numNew=[];
+		for(var i = k = 0; i < num.length; i ++) {
+			if(num[i] >= 10) {
+				numNew[k++] = num[i];
+			}
+		}
+		console.log(numNew);
+
+		// 方法2
+		var num=[2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+		var numNew=[];
+		for(var i = 0; i < num.length; i ++) {
+			if(num[i] >= 10) {
+				numNew[numNew.length] = num[i];
+			}
+		}
+		console.log(numNew);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

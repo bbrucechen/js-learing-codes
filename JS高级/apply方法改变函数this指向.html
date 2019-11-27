@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var o = {
+			name:1
+		};
+		// 函数名.apply(this指向，数组形式的参数)
+		function fn(a,b) {
+			console.log(this);
+			console.log(a + b);
+		};
+		fn.apply(o,[1,2]);
+		var arr = [1,2,3,4];
+		var max = Math.max.apply(Math,arr);
+		console.log(max);
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 1.普通函数 this 指向window
+	function fn() {
+
+	}
+	window.fn();   fn.call();
+	// 2.对象的方法 this 指向对象o
+	var o = {
+		sayHi: function() {
+			console.log('Hi');
+		}
+	}
+	o.sayHi();
+	// 3.构造函数 this 指向构造实例ldh
+	function Star() {
+
+	}
+	var ldh = new Star();
+	// 绑定事件函数 this指向事件绑定对象
+	btn.onclick = function() {
+
+	}
+	// 定时器函数 this指向window
+	setInterval(function() {},2000);
+	// 立即执行函数 this指向window
+	(function() {})()
+	</script>
+</body>
+</html>

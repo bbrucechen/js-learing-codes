@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name="">  <input type="submit" name="">
+	<script type="text/javascript">
+		//利用RegExp对象构造函数来创建
+		var regexp = new RegExp(/123/);
+		console.log(regexp);
+
+		//用字面量创建
+		var rg = /123/;
+		console.log(rg);
+
+		// 测试正则表达式 test() 用来检测字符串是否符合正则表达式要求的规范
+		console.log(rg.test(123));
+		console.log(rg.test('abc'));
+
+
+		var a = /wocaonima/;
+		console.log(a.test('diaonima'));
+		console.log(a.test('wocaonima'));
+
+		var rg1 = /424091906/;
+		var input1 = document.querySelector('input:first-child');
+		var input2  = document.querySelector('input:nth-child(2)');
+		input2.onclick = function() {
+			if(!rg1.test(input1.value)) {
+				alert('输入错误！');
+			}
+		}
+	</script>
+</body>
+</html>
